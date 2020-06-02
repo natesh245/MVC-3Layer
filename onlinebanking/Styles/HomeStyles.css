@@ -4,6 +4,17 @@
     padding: 0;
 }
 
+.btn-login {
+    width: 200px;
+    height: 1rem;
+    padding: 1rem;
+    margin-top:2rem ;
+    margin-bottom:2rem;
+    background-color: #6db4f2;
+    color:black;
+
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -24,7 +35,7 @@ body {
 .nav-container {
    
     width: 100%;
-    height: 50px;
+    height: 55px;
     display: grid;
     grid-template-columns: 20% 80%;
     background-color: #6db4f2;
