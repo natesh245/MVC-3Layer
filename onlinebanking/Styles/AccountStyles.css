@@ -1,0 +1,45 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    width:100%;
+
+}
+
+h2{
+    text-align:center;
+
+}
+
+
+
+table{
+    margin:5rem auto;
+    width:80%;
+}
+
+    table tr {
+        height: 5rem;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1rem;
+    }
+
+table tr:first-child {
+    background-color: #6db4f2;
+    height:5rem;
+    font-size:3rem;
+    font-weight:bold;
+    padding:1rem;
+}
+
+    table tr:last-child {
+        height: 5rem;
+        font-size: 1.5rem;
+        background-color: #d3e0eb;
+        font-weight:normal;
+    }
+
