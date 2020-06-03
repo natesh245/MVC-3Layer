@@ -12,6 +12,7 @@ namespace onlinebanking.Controllers
 {
     public class LoginController : Controller
     {
+
         public ActionResult Index()
         {
             return View();
@@ -24,7 +25,7 @@ namespace onlinebanking.Controllers
         {
             string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
             SqlConnection sqlCon = new SqlConnection(con);
-            string sqlQuery = "select id,user_password from CUSTOMER where email_id=@EmailId and user_password=@UserPasssword";
+            string sqlQuery = "select id,customer_name, email_id,user_password from CUSTOMER where email_id=@EmailId and user_password=@UserPasssword";
             sqlCon.Open();
             SqlCommand sqlCmd = new SqlCommand(sqlQuery,sqlCon);
             sqlCmd.Parameters.AddWithValue("@EmailId", lcObj.email_id);
@@ -32,7 +33,9 @@ namespace onlinebanking.Controllers
             SqlDataReader sdr = sqlCmd.ExecuteReader();
             if (sdr.Read())
             {
+                Session["customerid"] = sdr["id"].ToString();
                 Session["emailid"] = lcObj.email_id.ToString();
+                Session["Name"] = sdr[1].ToString();
                 return RedirectToAction("welcome");
             }
             else

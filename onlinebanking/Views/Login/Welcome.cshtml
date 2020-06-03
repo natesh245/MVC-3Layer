@@ -5,8 +5,15 @@
 
 @if (Session["emailid"] != null)
 {
-    <h2>Welcome @Session["emailid"]</h2>
+
+    <h2 class="welcome-header">Welcome @Session["Name"]</h2>
 
 }
+
+<div>
+    <p> @Html.ActionLink("Accounts", "Details", "Account", new { id = @Session["customerid"] },null)</p>
+   
+</div>
+
 
 

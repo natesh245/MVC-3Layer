@@ -10,6 +10,7 @@ namespace onlinebanking.Models
     {
         [Required(ErrorMessage ="Please enter the email id")]
         [Display(Name ="Email Id")]
+       
         public string email_id{ get; set; }
 
         [Required(ErrorMessage ="Please enter the Password")]
