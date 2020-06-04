@@ -69,10 +69,50 @@ body {
 
 }
 
+.welcome-container{
+    display:grid;
+    width:100%;
+    grid-template-columns:20% 80%;
+    grid-column-gap:0;
+
+}
+
+
+
+
 .welcome-header {
-    margin: 1rem auto;
-    padding:1rem;
+    margin: auto;
+    padding: 1rem;
     text-align: center;
-    width: 70%;
+    width: 90%;
     background-color: #d3e0eb;
 }
+
+ .welcome-list {
+   
+    background-color:aqua;
+    width: 90%;
+    margin-right:1rem;
+    height:300px;
+}
+
+
+.welcome-list-item {
+    width:100%;
+    background-color: #d3e0eb;
+    height: 4rem;
+    margin: 1rem 1rem 1rem 0;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+
+.welcome-links{
+    text-decoration:none;
+        color:black;
+        font-size:2rem;
+
+
+}
+
+
