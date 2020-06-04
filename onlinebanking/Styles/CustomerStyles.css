@@ -1,0 +1,35 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+dl{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    width:40%;
+    margin:2rem auto;
+    justify-content:center;
+    
+}
+
+dt {
+    width:100%;
+  
+    text-align:center;
+    background-color: #d3e0eb;
+    margin-bottom:1rem;
+    height:3rem;
+    font-size:2rem;
+    font-weight:bold;
+    border-bottom:2px solid black;
+    padding-left:1rem;
+}
+dd {
+    width: 100%;
+    font-size: 2rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid black;
+    padding-left: 1rem;
+}

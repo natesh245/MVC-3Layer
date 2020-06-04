@@ -37,10 +37,9 @@ namespace onlinebanking.Models
         public int pincode { get; set; }
         public long phone { get; set; }
         [Display(Name = "Email Id")]
-      
         public string email_id { get; set; }
-        [Display(Name = "User Name")]
+        
        
-        public string user_name { get; set; }
+   
     }
 }

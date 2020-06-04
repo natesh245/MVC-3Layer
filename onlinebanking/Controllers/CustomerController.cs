@@ -36,6 +36,7 @@ namespace onlinebanking.Controllers
                 cusObj.pincode= Convert.ToInt32(sdr["pincode"]);
                 cusObj.phone = Convert.ToInt64(sdr["phone"]);
                 cusObj.email_id = sdr["email_id"].ToString();
+              
             }
             else
             {
