@@ -108,6 +108,7 @@
     </dl>
 </div>
 <p>
-    
-    @Html.ActionLink("Back to List", "Welcome", "LogIn", new { id = @Session["customerid"] },null);
+
+    @Html.ActionLink("Back ", "Welcome", "LogIn", new { id = @Session["customerid"] }, null);
+    @Html.ActionLink("Edit", "Edit", "Customer", new { id = @Session["customerid"] }, null);
 </p>
