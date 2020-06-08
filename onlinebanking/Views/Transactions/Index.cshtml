@@ -47,7 +47,7 @@
 }
 
 <div>
-    @Html.ActionLink("reset", "Index",null,null,new { @class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
+    @Html.ActionLink("reset", "Details","Account", new { id = @Session["customerid"] },new { @class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
     @Html.ActionLink("Back to Welcome", "Welcome", "Login", new { id = @Session["customerid"] }, new { @class="btn btn-primary",
 @style="margin:1rem 0 1rem 1rem"});
 </div>

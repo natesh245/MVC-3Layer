@@ -1,0 +1,43 @@
+﻿@model onlinebanking.Models.Statements
+
+@{
+    ViewBag.Title = "Statement";
+}
+
+<h2>Statement @Session["Accountno"]</h2>
+@foreach (var listItem in Model.statementList)
+{
+
+    
+<div class="statement-container">
+    <ul>
+    <li>Debit Details</li>
+    <li>Transaction Id:@Html.DisplayFor(item => listItem.Id)</li>
+    <li>Account No:@Html.DisplayFor(item => listItem.DebitAccount)</li>
+    <li>Payee Account No:@Html.DisplayFor(item => listItem.CreditAccount)</li>
+    <li>Debit Amount:@Html.DisplayFor(item => listItem.DebitAmount)</li>
+    <li>Balance:@Html.DisplayFor(item => listItem.DebitAccountBalance)</li>
+    <li>Date:@Html.DisplayFor(item => listItem.DebitDate)</li>
+
+</ul>
+
+    
+    
+        <ul>
+            <li>Credit Details</li>
+            <li>Transaction Id:@Html.DisplayFor(item => listItem.IdCredit)</li>
+            <li>Account No:@Html.DisplayFor(item => listItem.CreditAccount)</li>
+            <li>From Account No:@Html.DisplayFor(item => listItem.DebitAccount)</li>
+            <li>Credit Amount:@Html.DisplayFor(item => listItem.DebitAmount)</li>
+            <li>Balance:@Html.DisplayFor(item => listItem.CreditAccountBalance)</li>
+            <li>Date:@Html.DisplayFor(item => listItem.CreditDate)</li>
+
+        </ul>
+    </div>
+
+    
+
+
+
+}
+
