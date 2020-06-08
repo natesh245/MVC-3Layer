@@ -1,0 +1,55 @@
+﻿@model onlinebanking.Models.TransactionClass
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Send Money</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="transaction-container">
+        <h4 style="color:green;">From:@Session["Accountno"]<br />
+        Balance:@Session["Balance"]</h4>
+        
+        @Html.ValidationSummary(true, "", new { @class = "error-text" })
+        
+
+        <div >
+            @Html.LabelFor(model => model.AccountNo, htmlAttributes: new { @class = "text-label" })
+            <div >
+                @Html.EditorFor(model => model.AccountNo, new { htmlAttributes = new { @class = "text-box-login "} })
+                @Html.ValidationMessageFor(model => model.AccountNo, "", new { @class = "error-text" })
+            </div>
+        </div>
+
+     
+
+        <div >
+            @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "text-label" })
+            <div>
+                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "text-box-login" } })
+                @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "error-text" })
+            </div>
+        </div>
+
+        <div >
+            <div >
+                <input type="submit" value="Send" class="btn btn-default" />
+
+            </div>
+            <h4 class="error-text">@ViewData["Message"]</h4>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

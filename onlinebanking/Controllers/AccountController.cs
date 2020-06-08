@@ -26,6 +26,8 @@ namespace onlinebanking.Controllers
             SqlDataReader sdr = sqlCmd.ExecuteReader();
             if (sdr.Read())
             {
+                Session["Accountno"] = Convert.ToInt64(sdr["account_no"]);
+                Session["Balance"]= Convert.ToInt64(sdr["balance"]);
                 accountObj.account_no = Convert.ToInt64(sdr["account_no"]);
                 accountObj.debit_card_no = Convert.ToInt64(sdr["debit_card_no"]);
                 accountObj.branch_id = sdr["branch_id"].ToString();

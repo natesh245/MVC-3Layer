@@ -4,13 +4,21 @@
     box-sizing:border-box;
 }
 
-dl{
+.container-customer{
+    width:80%;
     display:grid;
-    grid-template-columns:1fr 1fr;
-    width:40%;
-    margin:2rem auto;
-    justify-content:center;
-    
+    grid-template-columns:1fr 1fr 1fr;
+    margin:1rem auto;
+    border:2px solid black;
+    padding:1rem;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 40%;
+    margin: 2rem auto;
+    justify-content: center;
 }
 
 dt {
