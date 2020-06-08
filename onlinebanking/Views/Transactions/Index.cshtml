@@ -11,9 +11,9 @@
 {
     @Html.AntiForgeryToken()
     
-    <div class="transaction-container">
+    <div class="form-container">
         <h4 style="color:green;">From:@Session["Accountno"]<br />
-        Balance:@Session["Balance"]</h4>
+        Balance:Rs @Session["Balance"]</h4>
         
         @Html.ValidationSummary(true, "", new { @class = "error-text" })
         
@@ -47,7 +47,9 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("reset", "Index",null,null,new { @class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
+    @Html.ActionLink("Back to Welcome", "Welcome", "Login", new { id = @Session["customerid"] }, new { @class="btn btn-primary",
+@style="margin:1rem 0 1rem 1rem"});
 </div>
 
 @section Scripts {

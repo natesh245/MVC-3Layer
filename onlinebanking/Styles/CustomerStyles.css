@@ -1,16 +1,13 @@
-﻿*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+﻿
+body{
+    width:100%;
 }
 
-.container-customer{
-    width:80%;
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    margin:1rem auto;
-    border:2px solid black;
-    padding:1rem;
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
 }
 
 dl {

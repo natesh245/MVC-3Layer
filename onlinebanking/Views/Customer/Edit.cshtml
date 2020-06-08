@@ -4,16 +4,15 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Edit Details</h2>
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
-    <div class="container-customer">
-        <h4>Customer</h4>
-        <hr />
+    <div class="form-container form-grid">
+ 
         @Html.ValidationSummary(true, "", new { @class = "error-text" })
         <div >
             @Html.LabelFor(model => model.customer_name, htmlAttributes: new { @class = "text-label" })
@@ -120,7 +119,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Welcome", "LogIn", new { id = @Session["customerid"] },new{@class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
 </div>
 
 @section Scripts {

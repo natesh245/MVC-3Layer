@@ -9,6 +9,7 @@ body {
 
 }
 
+
 h2{
     text-align:center;
 
@@ -43,10 +44,5 @@ table tr:first-child {
         font-weight:normal;
     }
 
-.transaction-container{
-    width:80%;
-    border:2px solid black;
-    padding:2rem;
-    margin:1rem auto;
-}
+
 
