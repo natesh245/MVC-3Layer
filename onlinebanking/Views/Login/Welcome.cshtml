@@ -10,7 +10,7 @@
         <ul class="welcome-list">
             <li class="welcome-list-item"> @Html.ActionLink("Account", "Details", "Account", new { id = @Session["customerid"] }, new { @class = "welcome-links" })</li>
             <li class="welcome-list-item"> @Html.ActionLink("Customer Details", "Details", "Customer", new { id = @Session["customerid"] }, new { @class = "welcome-links" })</li>
-            <li class="welcome-list-item"> @Html.ActionLink("Transactions", "Index", "Transaction", new { id = @Session["customerid"] }, new { @class = "welcome-links" })</li>
+           
         </ul>
         <div><h2 class="welcome-header">Welcome @Session["Name"]</h2></div>
 

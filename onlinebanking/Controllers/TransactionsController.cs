@@ -41,7 +41,13 @@ namespace onlinebanking.Controllers
                 sqlCmd.ExecuteNonQuery();
                 sqlCon.Close();
                 ViewData["Message"] = " Transaction Successfull";
-                return View();
+                return RedirectToRoute(new
+                {
+                    controller = "Transactions",
+                    action = "Statement"
+                   
+                });
+
 
             }
             catch
