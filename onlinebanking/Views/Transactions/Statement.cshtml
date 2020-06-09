@@ -6,8 +6,9 @@
 
 <h2>Statement @Session["Accountno"]</h2>
 
-@Html.ActionLink("Go to Accounts", "Details", "Account",new {id=Session["customerid"]},
+@Html.ActionLink("Go to Accounts", "Details", "Account", new { id = Session["customerid"] },
      new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
+@Html.ActionLink("LOG OUT", "Logout", "Login", null, new { @class = "btn btn-primary" })
 @foreach (var listItem in Model.statementList)
 {
 

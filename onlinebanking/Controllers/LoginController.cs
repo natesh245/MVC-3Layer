@@ -10,15 +10,25 @@ using System.Data.SqlClient;
 
 namespace onlinebanking.Controllers
 {
+
     public class LoginController : Controller
     {
+        public ActionResult Logout()
+        {
+            Session["customerid"] = null;
+            Session["emailid"] = null;
+            Session["Name"] = null;
+            Session["Accountno"] = null;
+            return RedirectToAction("Index");
+
+        }
 
         public ActionResult Index()
         {
             return View();
         }
-       
-   
+
+
 
         [HttpPost]
         public ActionResult Index(LoginClass lcObj)
@@ -27,7 +37,7 @@ namespace onlinebanking.Controllers
             SqlConnection sqlCon = new SqlConnection(con);
             string sqlQuery = "select id,customer_name, email_id,user_password from CUSTOMER where email_id=@EmailId and user_password=@UserPasssword";
             sqlCon.Open();
-            SqlCommand sqlCmd = new SqlCommand(sqlQuery,sqlCon);
+            SqlCommand sqlCmd = new SqlCommand(sqlQuery, sqlCon);
             sqlCmd.Parameters.AddWithValue("@EmailId", lcObj.email_id);
             sqlCmd.Parameters.AddWithValue("@UserPasssword", lcObj.user_password);
             SqlDataReader sdr = sqlCmd.ExecuteReader();
@@ -51,5 +61,7 @@ namespace onlinebanking.Controllers
         {
             return View();
         }
+
+       
     }
 }

@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-container">
-        <h4 style="color:green;">From:@Session["Accountno"]<br />
+        <h4 style="color:green;">From:@Session["Name"]-@Session["Accountno"]<br />
         Balance:Rs @Session["Balance"]</h4>
         
         @Html.ValidationSummary(true, "", new { @class = "error-text" })
