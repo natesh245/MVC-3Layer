@@ -1,4 +1,10 @@
-﻿.welcome-container {
+﻿body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.welcome-container {
     width: 100%;
     display:flex;
     flex-direction:column-reverse;
@@ -8,7 +14,7 @@
 
 
 .welcome-header {
- 
+  
     padding: 1rem;
     text-align: center;
     width: 100%;
@@ -16,13 +22,13 @@
 }
 
 .welcome-list {
-    display:flex;
-    flex-direction:column;
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    background-color: #6db4f2;
     width: 50%;
     height: 200px;
     padding: 2rem;
-    margin:3rem auto;
+    margin: 3rem auto;
 }
 
 

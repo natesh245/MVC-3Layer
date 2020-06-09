@@ -34,11 +34,11 @@
         <div class="btn-container">
             <div>
 
-                <input type="submit" value="Login" class="btn-login-page" />
+                <input type="submit" value="Login" class="btn btn-primary" />
 
             </div>
             <div>
-                @Html.ActionLink("reset", "Index", "Login", null, new { @class = "btn-reset-page" })
+                @Html.ActionLink("reset", "Index", "Login", null, new { @class = "btn btn-primary" })
             </div>
         </div>
         <h1 class="error-text">@Html.ViewData["Message"]</h1>
