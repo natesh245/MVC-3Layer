@@ -4,7 +4,10 @@
     ViewBag.Title = "Statement";
 }
 
-<h2>Statement @Session["Accountno"]</h2>
+<h2>Account Statement <br />
+    <span style="color:green;">@Session["Name"]-@Session["Accountno"]</span>
+    
+    </h2>
 
 @Html.ActionLink("Go to Accounts", "Details", "Account", new { id = Session["customerid"] },
      new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })

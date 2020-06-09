@@ -1,4 +1,4 @@
-﻿body{
+﻿*{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -22,30 +22,39 @@
 }
 
 .welcome-list {
-    display: flex;
-    flex-direction: column;
+   
     background-color: #6db4f2;
     width: 50%;
-    height: 200px;
+    height: 250px;
     padding: 1rem;
-    margin: 3rem auto;
+    margin: 2rem auto;
 }
 
 
 .welcome-list-item {
     width: 90%;
     background-color: #d3e0eb;
-    height: 4rem;
-    margin: 1rem;
+    height: 5rem;
+    margin: 2rem auto;
     padding: 1rem;
     text-decoration: none;
-    text-align: center;
+    text-align:center;
+    
 }
 
+    .welcome-list-item:hover {
+        color: white !important;
+        border: 2px solid #275eb8  ;
+    }
 
-.welcome-links {
-  
+
+.welcome-links:link,
+.welcome-links:active{
     text-decoration: none;
     color: black;
     font-size: 2rem;
+    padding:1rem;
 }
+
+
+
