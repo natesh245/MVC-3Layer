@@ -161,6 +161,7 @@
     <Content Include="Styles\CustomerStyles.css" />
     <Content Include="Styles\HomeStyles.css" />
     <Content Include="Styles\LoginStyles.css" />
+    <Content Include="Styles\MediaStyles.css" />
     <Content Include="Styles\StatementStyles.css" />
     <Content Include="Styles\WelcomeStyles.css" />
     <Content Include="Web.config" />

@@ -18,7 +18,7 @@ namespace onlinebanking.Models
         public string fathers_name { get; set; }
         [Required(ErrorMessage = "Date of Birth is Required")]
         [Display(Name = "DOB")]
-      
+       
         public  string date_of_birth { get; set; }
         [Required(ErrorMessage = "Age is Required")]
         [Display(Name = "Age")]
@@ -38,7 +38,7 @@ namespace onlinebanking.Models
         public string customer_state { get; set; }
         [Display(Name = "Country")]
         [Required(ErrorMessage = "Country is Required")]
-        public string customer_country { get; set; }
+        public string customer_country { get ; set; }
         [Required(ErrorMessage = "Pincode is Required")]
         public int pincode { get; set; }
         [Required(ErrorMessage = "Phone no is Required")]
