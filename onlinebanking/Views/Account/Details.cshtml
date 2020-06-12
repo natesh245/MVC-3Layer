@@ -4,6 +4,13 @@
     ViewBag.Title = "Details";
 }
 
+    <div>
+        <h2 class="welcome-header">
+            Welcome @Session["Name"]
+            @Html.ActionLink("Log Out", "Logout", "Login", null, new { @class = "btn btn-primary", @style ="float:right;"})
+        </h2>
+    </div>
+
 <h2>Account Details</h2>
 @Html.ActionLink("Send Money", "Index", "Transactions", null, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
 @Html.ActionLink("Statement", "Statement", "Transactions", null, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })

@@ -14,16 +14,26 @@
     <link href="@Url.Content("~/Styles/StatementStyles.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Styles/WelcomeStyles.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Styles/MediaStyles.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Styles/MediaStyles2.css")" rel="stylesheet" type="text/css" />
+    <style>
+        .container-body{
+            padding:0;
+            margin:0;
 
+        }
 
+        .nav-container{
+            padding:0;
+            margin:0;
+        }
+            
+    </style>
 
 </head>
-<body>
+<body >
    
-        <div class="nav-container">
-            <div >
-                @Html.ActionLink("HDFC", "Index", "Home", new { area = "" }, new { @class = "brand" })
-            </div>
+        <div class="nav-container" >
+            
             <div >
                 <ul class="list-container">
                     <li class="list-item">@Html.ActionLink("Home", "Index", "Home")</li>
@@ -33,7 +43,7 @@
             </div>
         </div>
 
-    <div class="container-body">
+    <div class="container-body" >
         @RenderBody()
         <hr />
         <footer>
