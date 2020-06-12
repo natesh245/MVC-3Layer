@@ -14,7 +14,7 @@ namespace onlinebanking.Models
         [Display(Name = "Name")]
         public string customer_name { get; set; }
         [Required(ErrorMessage = "Fathers Name is Required")]
-        [Display(Name = "Fathers Name")]
+        [Display(Name = "Father Name")]
         public string fathers_name { get; set; }
         [Required(ErrorMessage = "Date of Birth is Required")]
         [Display(Name = "DOB")]
@@ -24,7 +24,7 @@ namespace onlinebanking.Models
         [Display(Name = "Age")]
        
         public int customer_age { get; set; }
-        [Display(Name = "Martial Status")]
+        [Display(Name = "Marital Status")]
         [Required(ErrorMessage = "Martial Status is Required")]
         public string martial_status { get; set; }
         [Display(Name = "Address")]
