@@ -13,6 +13,7 @@ namespace onlinebanking.Controllers
 
     public class LoginController : Controller
     {
+        
         public ActionResult Logout()
         {
             Session["customerid"] = null;
@@ -25,6 +26,7 @@ namespace onlinebanking.Controllers
 
         public ActionResult Index()
         {
+           
             return View();
         }
 
@@ -46,21 +48,25 @@ namespace onlinebanking.Controllers
                 Session["customerid"] = sdr["id"].ToString();
                 Session["emailid"] = lcObj.email_id.ToString();
                 Session["Name"] = sdr[1].ToString();
-                return RedirectToAction("welcome");
+                ViewData["isLoggedIn"] = "true";
+                return RedirectToRoute(new
+                {
+                    controller = "Account",
+                    action = "Details",
+                    id = Session["customerid"]
+
+                });
             }
             else
             {
                 ViewData["Message"] = "User Login Failed";
             }
             sqlCon.Close();
-
+           
             return View();
         }
 
-        public ActionResult Welcome()
-        {
-            return View();
-        }
+      
 
        
     }

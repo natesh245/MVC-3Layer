@@ -10,20 +10,22 @@ namespace onlinebanking.Controllers
     {
         public ActionResult Index()
         {
+            
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = " ";
 
+            ViewBag.Message = " ";
+         
             return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Contact Us.";
-
+          
             return View();
         }
     }

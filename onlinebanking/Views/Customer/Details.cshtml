@@ -109,6 +109,6 @@
 </div>
 <p>
 
-    @Html.ActionLink("Back ", "Welcome", "LogIn", new { id = @Session["customerid"] }, new { @class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
+    @Html.ActionLink("Back ", "Details", "Account", new { id = @Session["customerid"] }, new { @class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
     @Html.ActionLink("Edit", "Edit", "Customer", new { id = @Session["customerid"] }, new { @class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
 </p>

@@ -9,41 +9,46 @@
     @Scripts.Render("~/bundles/modernizr")
     <link href="@Url.Content("~/Styles/HomeStyles.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Styles/LoginStyles.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Styles/AccountStyles.css")" rel="stylesheet" type="text/css" />
+
+
     <link href="@Url.Content("~/Styles/CustomerStyles.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Styles/StatementStyles.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Styles/WelcomeStyles.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Styles/MediaStyles.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Styles/MediaStyles2.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Styles/AccountStyles2.css")" rel="stylesheet" type="text/css" />
     <style>
-        .container-body{
-            padding:0;
-            margin:0;
-
+        .container-body {
+            padding: 0;
+            margin: 0;
         }
 
-        .nav-container{
-            padding:0;
-            margin:0;
+        .nav-container {
+            padding: 0;
+            margin: 0;
         }
-            
     </style>
 
 </head>
-<body >
+<body>
    
         <div class="nav-container" >
-            
-            <div >
+
+            <div>
                 <ul class="list-container">
-                    <li class="list-item">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="list-item">@Html.ActionLink("Home", "Index", "Home", null, new { @style = "margin-left:1rem;" })</li>
                     <li class="list-item">@Html.ActionLink("About", "About", "Home")</li>
                     <li class="list-item">@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>
 
-    <div class="container-body" >
+    
+
+
+
+
+    <div class="container-body">
         @RenderBody()
         <hr />
         <footer>

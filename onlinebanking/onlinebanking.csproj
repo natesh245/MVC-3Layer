@@ -157,14 +157,13 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Styles\AccountStyles.css" />
+    <Content Include="Styles\AccountStyles2.css" />
     <Content Include="Styles\CustomerStyles.css" />
     <Content Include="Styles\HomeStyles.css" />
     <Content Include="Styles\LoginStyles.css" />
     <Content Include="Styles\MediaStyles.css" />
     <Content Include="Styles\MediaStyles2.css" />
     <Content Include="Styles\StatementStyles.css" />
-    <Content Include="Styles\WelcomeStyles.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -180,7 +179,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Login\Welcome.cshtml" />
     <Content Include="Views\Account\Details.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Customer\Edit.cshtml" />
