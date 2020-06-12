@@ -4,21 +4,8 @@
     ViewBag.Title = "Details";
 }
 
-      
-
-        
-
-
-
         <div class="account-container">
-            <ul class="welcome-list">
-                <li class="welcome-list-item"> @Html.ActionLink("Account", "Details", "Account", new { id = @Session["customerid"] }, new { @class = "welcome-links" })</li>
-                <li class="welcome-list-item"> @Html.ActionLink("Customer Details", "Details", "Customer", new { id = @Session["customerid"] }, new { @class = "welcome-links" })</li>
-                <li class="welcome-list-item"> @Html.ActionLink("Change Password", "Welcome", "Login", new { id = @Session["customerid"] }, new { @class = "welcome-links" })</li>
-
-            </ul>
-
-            <div class="account-table">
+           
                 <div>
                     <h2 class="welcome-header">
                         Welcome @Session["Name"]
@@ -72,5 +59,5 @@
             </div>
 
 
-        </div>
+       
    

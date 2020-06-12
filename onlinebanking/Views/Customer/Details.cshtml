@@ -4,111 +4,114 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Customer Details</h2>
 
-<div>
-    <dl >
-        <dt>
-            @Html.DisplayNameFor(model => model.customer_name)
-        </dt>
+<div class="account-container">
+    <
 
-        <dd>
-            @Html.DisplayFor(model => model.customer_name)
-        </dd>
+    <div>
+        <h2>Customer Details</h2>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.fathers_name)
-        </dt>
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.customer_name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.fathers_name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.customer_name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.date_of_birth)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.fathers_name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.date_of_birth)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.fathers_name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.customer_age)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.date_of_birth)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.customer_age)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.date_of_birth)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.martial_status)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.customer_age)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.martial_status)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.customer_age)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.customer_address)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.martial_status)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.customer_address)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.martial_status)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.customer_city)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.customer_address)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.customer_city)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.customer_address)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.customer_state)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.customer_city)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.customer_state)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.customer_city)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.customer_country)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.customer_state)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.customer_country)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.customer_state)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.pincode)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.customer_country)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.pincode)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.customer_country)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.phone)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.pincode)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.phone)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.pincode)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.email_id)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.phone)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.email_id)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.phone)
+            </dd>
 
-  
-    </dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.email_id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.email_id)
+            </dd>
+            
+
+
+        </dl>
+        
+
+    </div>
 </div>
-<p>
-
-    @Html.ActionLink("Back ", "Details", "Account", new { id = @Session["customerid"] }, new { @class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
-    @Html.ActionLink("Edit", "Edit", "Customer", new { id = @Session["customerid"] }, new { @class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
-</p>

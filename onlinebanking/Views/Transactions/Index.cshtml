@@ -4,52 +4,56 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Send Money</h2>
-
-
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-container">
-        <h4 style="color:green;">From:@Session["Name"]-@Session["Accountno"]<br />
-        Balance:Rs @Session["Balance"]</h4>
+    <div class="account-container">
         
-        @Html.ValidationSummary(true, "", new { @class = "error-text" })
-        
+        <div>
+            <h2>Send Money</h2>
 
-        <div >
-            @Html.LabelFor(model => model.AccountNo, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.AccountNo, new { htmlAttributes = new { @class = "text-box-login "} })
-                @Html.ValidationMessageFor(model => model.AccountNo, "", new { @class = "error-text" })
-            </div>
-        </div>
 
-     
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
 
-        <div >
-            @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "text-label" })
-            <div>
-                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "error-text" })
-            </div>
-        </div>
+                <div class="form-container">
+                    <h4 style="color:green;">
+                        From:@Session["Name"]-@Session["Accountno"]<br />
+                        Balance:Rs @Session["Balance"]
+                    </h4>
 
-        <div >
-            <div >
-                <input type="submit" value="Send" class="btn btn-default" />
+                    @Html.ValidationSummary(true, "", new { @class = "error-text" })
 
-            </div>
-            <h4 class="error-text">@ViewData["Message"]</h4>
+
+                    <div>
+                        @Html.LabelFor(model => model.AccountNo, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.AccountNo, new { htmlAttributes = new { @class = "text-box-login " } })
+                            @Html.ValidationMessageFor(model => model.AccountNo, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <input type="submit" value="Send" class="btn btn-default" />
+
+                        </div>
+                        <h4 class="error-text">@ViewData["Message"]</h4>
+                    </div>
+                </div>
+            }
+
+           
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to Account", "Details","Account", new { id = @Session["customerid"] },new { @class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
-  
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

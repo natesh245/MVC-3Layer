@@ -161,8 +161,6 @@
     <Content Include="Styles\CustomerStyles.css" />
     <Content Include="Styles\HomeStyles.css" />
     <Content Include="Styles\LoginStyles.css" />
-    <Content Include="Styles\MediaStyles.css" />
-    <Content Include="Styles\MediaStyles2.css" />
     <Content Include="Styles\StatementStyles.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -184,6 +182,7 @@
     <Content Include="Views\Customer\Edit.cshtml" />
     <Content Include="Views\Transactions\Index.cshtml" />
     <Content Include="Views\Transactions\Statement.cshtml" />
+    <Content Include="Views\Shared\_SideNavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
