@@ -4,124 +4,133 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit Details</h2>
-
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-container form-grid">
- 
-        @Html.ValidationSummary(true, "", new { @class = "error-text" })
-        <div >
-            @Html.LabelFor(model => model.customer_name, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.customer_name, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.customer_name, "", new { @class = "error-text" })
-            </div>
-        </div>
-
-        <div >
-            @Html.LabelFor(model => model.fathers_name, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.fathers_name, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.fathers_name, "", new { @class = "error-text" })
-            </div>
-        </div>
-
-        <div >
-            @Html.LabelFor(model => model.date_of_birth, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.date_of_birth, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.date_of_birth, "", new { @class = "error-text" })
-            </div>
-        </div>
-
-        <div >
-            @Html.LabelFor(model => model.customer_age, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.customer_age, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.customer_age, "", new { @class = "error-text" })
-            </div>
-        </div>
-
-        <div >
-            @Html.LabelFor(model => model.martial_status, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.martial_status, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.martial_status, "", new { @class = "error-text" })
-            </div>
-        </div>
-
-        <div >
-            @Html.LabelFor(model => model.customer_address, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.customer_address, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.customer_address, "", new { @class = "error-text" })
-            </div>
-        </div>
-
-        <div >
-            @Html.LabelFor(model => model.customer_city, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.customer_city, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.customer_city, "", new { @class = "error-text" })
-            </div>
-        </div>
-
-        <div >
-            @Html.LabelFor(model => model.customer_state, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.customer_state, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.customer_state, "", new { @class = "error-text" })
-            </div>
-        </div>
-
-        <div >
-            @Html.LabelFor(model => model.customer_country, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.customer_country, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.customer_country, "", new { @class = "error-text" })
-            </div>
-        </div>
-
+    <div class="layout-container">
         <div>
-            @Html.LabelFor(model => model.pincode, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.pincode, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.pincode, "", new { @class = "error-text" })
-            </div>
+            @{
+                Html.RenderPartial("_SideNavBar");
+            }
         </div>
+        <div>
+            <h2>Edit Details</h2>
 
-        <div >
-            @Html.LabelFor(model => model.phone, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.phone, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.phone, "", new { @class = "error-text" })
-            </div>
-        </div>
 
-        <div >
-            @Html.LabelFor(model => model.email_id, htmlAttributes: new { @class = "text-label" })
-            <div >
-                @Html.EditorFor(model => model.email_id, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.email_id, "", new { @class = "error-text" })
-            </div>
-        </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
 
-        <div >
-            <div >
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <div class="form-container form-grid">
+
+                    @Html.ValidationSummary(true, "", new { @class = "error-text" })
+                    <div>
+                        @Html.LabelFor(model => model.customer_name, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.customer_name, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.customer_name, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.fathers_name, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.fathers_name, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.fathers_name, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.date_of_birth, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.date_of_birth, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.date_of_birth, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.customer_age, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.customer_age, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.customer_age, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.martial_status, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.martial_status, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.martial_status, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.customer_address, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.customer_address, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.customer_address, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.customer_city, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.customer_city, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.customer_city, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.customer_state, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.customer_state, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.customer_state, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.customer_country, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.customer_country, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.customer_country, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.pincode, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.pincode, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.pincode, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.phone, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.phone, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.phone, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(model => model.email_id, htmlAttributes: new { @class = "text-label" })
+                        <div>
+                            @Html.EditorFor(model => model.email_id, new { htmlAttributes = new { @class = "text-box-login" } })
+                            @Html.ValidationMessageFor(model => model.email_id, "", new { @class = "error-text" })
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                            <h4 class="error-text">@ViewData["CustomerMessage"]</h4>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div>
+                @Html.ActionLink("Go to Account", "Details", "Account", new { id = @Session["customerid"] }, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
             </div>
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Go to Account", "Details", "Account", new { id = @Session["customerid"] },new{@class="btn btn-primary",@style="margin:1rem 0 1rem 1rem"})
-</div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

@@ -48,6 +48,7 @@ namespace onlinebanking.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
+            ViewData["CustomerMessage"] = "";
             Customer cusObj = new Customer();
             string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
             SqlConnection sqlCon = new SqlConnection(con);
@@ -71,15 +72,9 @@ namespace onlinebanking.Controllers
                 cusObj.email_id = sdr["email_id"].ToString();
 
             }
-            else
-            {
-                ViewData["Message"] = "User Login Failed";
-            }
+           
             sqlCon.Close();
             return View(cusObj);
-
-
-
 
         }
 
@@ -87,6 +82,7 @@ namespace onlinebanking.Controllers
         [ActionName("Edit")]
         public ActionResult Edit_Post(int id)
         {
+            ViewData["CustomerMessage"] = "";
             Customer cusObj = new Customer();
             UpdateModel(cusObj);
             string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
@@ -111,12 +107,8 @@ namespace onlinebanking.Controllers
 
             sqlCmd.ExecuteNonQuery();
             sqlCon.Close();
-            return RedirectToRoute(new
-            {
-                controller = "Customer",
-                action = "Details",
-                id = id
-            });
+            ViewData["CustomerMessage"] = "Changes Saved Successfully";
+            return View();
 
 
         }

@@ -4,9 +4,14 @@
     ViewBag.Title = "Statement";
 }
 
-    <div class="account-container">
-       
+    <div class="layout-container">
         <div>
+            @{
+                Html.RenderPartial("_SideNavBar");
+            }
+        </div>
+
+        <div class="account-container">
             <h2>
                 Account Statement <br />
                 <span style="color:green;">@Session["Name"]-@Session["Accountno"]</span>

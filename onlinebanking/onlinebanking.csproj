@@ -183,6 +183,7 @@
     <Content Include="Views\Transactions\Index.cshtml" />
     <Content Include="Views\Transactions\Statement.cshtml" />
     <Content Include="Views\Shared\_SideNavBar.cshtml" />
+    <Content Include="Views\Shared\_TopNavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

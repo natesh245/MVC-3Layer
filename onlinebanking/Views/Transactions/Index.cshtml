@@ -4,9 +4,14 @@
     ViewBag.Title = "Index";
 }
 
-    <div class="account-container">
-        
+    <div class="layout-container">
         <div>
+            @{
+                Html.RenderPartial("_SideNavBar");
+            }
+        </div>
+
+        <div class="account-container">
             <h2>Send Money</h2>
 
 
@@ -51,7 +56,7 @@
                 </div>
             }
 
-           
+
         </div>
     </div>
 

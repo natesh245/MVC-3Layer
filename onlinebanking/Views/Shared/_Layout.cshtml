@@ -31,27 +31,8 @@
 </head>
 <body>
    
-        <div class="nav-container" >
-
-            <div>
-                <ul class="list-container">
-                    <li class="list-item">@Html.ActionLink("Home", "Index", "Home", null, new { @style = "margin-left:1rem;" })</li>
-                    <li class="list-item">@Html.ActionLink("About", "About", "Home")</li>
-                    <li class="list-item">@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="layout-container">
-            <div>
-                @{
-                    Html.RenderPartial("_SideNavBar");
-                }
-            </div>
-
-
-
-
+        <div >
+           
             <div class="container-body">
                 @RenderBody()
                 <hr />

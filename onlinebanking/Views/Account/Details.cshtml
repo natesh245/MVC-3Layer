@@ -4,59 +4,65 @@
     ViewBag.Title = "Details";
 }
 
+    <div class="layout-container ">
+        <div>
+            @{
+                Html.RenderPartial("_SideNavBar");
+            }
+        </div>
+
         <div class="account-container">
-           
-                <div>
-                    <h2 class="welcome-header">
-                        Welcome @Session["Name"]
-                        @Html.ActionLink("Log Out", "Logout", "Login", null, new { @class = "btn btn-primary", @style = "float:right;" })
-                    </h2>
-                    <h2>Account Details</h2>
-                </div>
-                <table>
-                    <tr>
-                        <td>Savings Account</td>
-                        <td></td>
-                        <td>Total Available Balance</td>
-                        <td>Rs. @Model.balance</td>
+            <h2 class="welcome-header">
+                Welcome @Session["Name"]
+                @Html.ActionLink("Log Out", "Logout", "Login", null, new { @class = "btn btn-primary", @style = "float:right;" })
+            </h2>
+            <h2>Account Details</h2>
 
-                    </tr>
-                    <tr>
-                        <td>
-                            Account No:
-                        </td>
-                        <td>
-                            IFSC CODE:
-                        </td>
-                        <td>
-                            Name:
-                        </td>
-                        <td>
-                            Balance
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            @Model.account_no
-                        </td>
-                        <td>
-                            @Model.branch_id
-                        </td>
-                        <td>
-                            @Session["Name"]
-                        </td>
-                        <td>
-                            Rs .@Model.balance
-                        </td>
-                    </tr>
+            <table>
+                <tr>
+                    <td>Savings Account</td>
+                    <td></td>
+                    <td>Total Available Balance</td>
+                    <td>Rs. @Model.balance</td>
 
-                </table>
-                <div class="account-links">
-                    @Html.ActionLink("Send Money", "Index", "Transactions", null, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
-                    @Html.ActionLink("Statement", "Statement", "Transactions", null, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
-                  
-                </div>
+                </tr>
+                <tr>
+                    <td>
+                        Account No:
+                    </td>
+                    <td>
+                        IFSC CODE:
+                    </td>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        Balance
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Model.account_no
+                    </td>
+                    <td>
+                        @Model.branch_id
+                    </td>
+                    <td>
+                        @Session["Name"]
+                    </td>
+                    <td>
+                        Rs .@Model.balance
+                    </td>
+                </tr>
+
+            </table>
+            <div class="account-links">
+                @Html.ActionLink("Send Money", "Index", "Transactions", null, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
+                @Html.ActionLink("Statement", "Statement", "Transactions", null, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
+
             </div>
+        </div>
+    </div>
 
 
        
