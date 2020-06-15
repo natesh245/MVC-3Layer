@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\FixedDepositController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\TransactionsController.cs" />
@@ -130,6 +131,8 @@
     </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\FdDetails.cs" />
+    <Compile Include="Models\FixedDepositClass.cs" />
     <Compile Include="Models\LoginClass.cs" />
     <Compile Include="Models\Statements.cs" />
     <Compile Include="Models\TransactionClass.cs" />
@@ -184,6 +187,8 @@
     <Content Include="Views\Transactions\Statement.cshtml" />
     <Content Include="Views\Shared\_SideNavBar.cshtml" />
     <Content Include="Views\Shared\_TopNavBar.cshtml" />
+    <Content Include="Views\FixedDeposit\Index.cshtml" />
+    <Content Include="Views\FixedDeposit\FdDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
