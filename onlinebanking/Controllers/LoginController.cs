@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using onlinebanking.Models;
+using BussinessLayer.Models;
 using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
+using BussinessLayer;
+
 
 namespace onlinebanking.Controllers
 {
@@ -33,20 +35,15 @@ namespace onlinebanking.Controllers
 
 
         [HttpPost]
-        public ActionResult Index(LoginClass lcObj)
+        public ActionResult Index(LoginModel lMObj)
         {
-            string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
-            SqlConnection sqlCon = new SqlConnection(con);
-            string sqlQuery = "select id,customer_name, email_id,user_password from CUSTOMER where email_id=@EmailId and user_password=@UserPasssword";
-            sqlCon.Open();
-            SqlCommand sqlCmd = new SqlCommand(sqlQuery, sqlCon);
-            sqlCmd.Parameters.AddWithValue("@EmailId", lcObj.email_id);
-            sqlCmd.Parameters.AddWithValue("@UserPasssword", lcObj.user_password);
-            SqlDataReader sdr = sqlCmd.ExecuteReader();
+            LoginBusinessLayer lbObj = new LoginBusinessLayer();
+            LoginModel lmObj = new LoginModel();
+           SqlDataReader sdr =lbObj.LoginUser(lmObj.EmailId,lmObj.Password);
             if (sdr.Read())
             {
                 Session["customerid"] = sdr["id"].ToString();
-                Session["emailid"] = lcObj.email_id.ToString();
+                Session["emailid"] = lMObj.EmailId.ToString();
                 Session["Name"] = sdr[1].ToString();
                 ViewData["isLoggedIn"] = "true";
                 return RedirectToRoute(new
@@ -61,7 +58,7 @@ namespace onlinebanking.Controllers
             {
                 ViewData["Message"] = "User Login Failed";
             }
-            sqlCon.Close();
+            
            
             return View();
         }

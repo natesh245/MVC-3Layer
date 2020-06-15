@@ -1,4 +1,4 @@
-﻿@model onlinebanking.Models.LoginClass
+﻿@model BussinessLayer.Models.LoginModel
 
 @{
     ViewBag.Title = "Index";
@@ -16,18 +16,18 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "error-text" })
         <div>
-            @Html.LabelFor(model => model.email_id, htmlAttributes: new { @class = "text-label" })
+            @Html.LabelFor(model => model.EmailId, htmlAttributes: new { @class = "text-label" })
 
-            @Html.EditorFor(model => model.email_id, new { htmlAttributes = new { @class = "text-box-login" } })
-            @Html.ValidationMessageFor(model => model.email_id, "", new { @class = "error-text" })
+            @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @class = "text-box-login" } })
+            @Html.ValidationMessageFor(model => model.EmailId, "", new { @class = "error-text" })
 
         </div>
 
         <div>
-            @Html.LabelFor(model => model.user_password, htmlAttributes: new { @class = "text-label" })
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "text-label" })
 
-            @Html.EditorFor(model => model.user_password, new { htmlAttributes = new { @class = "text-box-login" } })
-            @Html.ValidationMessageFor(model => model.user_password, "", new { @class = "error-text" })
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "text-box-login" } })
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "error-text" })
 
         </div>
 

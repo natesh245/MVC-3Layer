@@ -18,8 +18,13 @@
             <hr />
             <p>
 
-                @Html.ActionLink("Back ", "Details", "Account", new { id = @Session["customerid"] }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Back ", "Details", "Account", new { id = @Session["customerid"] }, new { @class = "btn btn-primary",@style="margin-left:4rem;" })
             </p>
+           @if (Model.FdDetailList==null)
+            {
+                <h2 class="error-text">No Fixed Deposit</h2>
+
+            }
             @foreach (var item in Model.FdDetailList)
             {
                 <div class="account-container">

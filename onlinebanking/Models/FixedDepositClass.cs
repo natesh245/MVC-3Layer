@@ -14,7 +14,7 @@ namespace onlinebanking.Models
         ErrorMessage = "Amount  must be between {1} and {2}.")]
         public long fd_amount { get; set; }
 
-        [Required(ErrorMessage = "Please enter the Amount")]
+        [Required(ErrorMessage = "Please enter the Duration")]
         [Display(Name = "Fixed deposit Duration(in months)")]
         public int duration { get; set; }
 

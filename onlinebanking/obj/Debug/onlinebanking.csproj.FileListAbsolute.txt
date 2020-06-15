@@ -154,3 +154,7 @@ C:\Users\HP\Desktop\practice-project\MVC-Project\onlinebanking\obj\Debug\onlineb
 C:\Users\HP\Desktop\practice-project\MVC-Project\onlinebanking\obj\Debug\onlinebanking.csproj.CopyComplete
 C:\Users\HP\Desktop\practice-project\MVC-Project\onlinebanking\obj\Debug\onlinebanking.dll
 C:\Users\HP\Desktop\practice-project\MVC-Project\onlinebanking\obj\Debug\onlinebanking.pdb
+C:\Users\HP\Desktop\practice-project\MVC-Project\onlinebanking\bin\BussinessLayer.dll
+C:\Users\HP\Desktop\practice-project\MVC-Project\onlinebanking\bin\DataAccess.dll
+C:\Users\HP\Desktop\practice-project\MVC-Project\onlinebanking\bin\BussinessLayer.pdb
+C:\Users\HP\Desktop\practice-project\MVC-Project\onlinebanking\bin\DataAccess.pdb

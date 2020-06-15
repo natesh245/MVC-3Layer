@@ -160,10 +160,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Styles\AccountStyles2.css" />
+    <Content Include="Styles\AccountStyle.css" />
     <Content Include="Styles\CustomerStyles.css" />
     <Content Include="Styles\HomeStyles.css" />
-    <Content Include="Styles\LoginStyles.css" />
+    <Content Include="Styles\LoginStyle.css" />
     <Content Include="Styles\StatementStyles.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -205,6 +205,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BussinessLayer\BussinessLayer.csproj">
+      <Project>{05cef14f-dedb-4a58-9c68-3c63b7941ac2}</Project>
+      <Name>BussinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{20aab8ce-2ed8-4ece-95f4-5c86f2ff6a2c}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
