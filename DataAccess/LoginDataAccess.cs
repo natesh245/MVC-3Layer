@@ -11,13 +11,12 @@ namespace DataAccess
 {
     public class LoginDataAccess
     {
-        
+         public static string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+        public static SqlConnection sqlCon = new SqlConnection(con);
+
         public SqlDataReader Login(string emailId, string Password)
         {
-            
 
-        string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
-            SqlConnection sqlCon = new SqlConnection(con);
             string sqlQuery = "select id,customer_name, email_id,user_password from CUSTOMER where email_id=@EmailId and user_password=@UserPasssword";
             sqlCon.Open();
             SqlCommand sqlCmd = new SqlCommand(sqlQuery, sqlCon);

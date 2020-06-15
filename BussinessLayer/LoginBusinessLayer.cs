@@ -15,8 +15,8 @@ namespace BussinessLayer
         public SqlDataReader LoginUser(string Emailid,string Password)
         {
             LoginDataAccess loginDl = new LoginDataAccess();
-            LoginModel lmObj = new LoginModel();
-            return loginDl.Login(lmObj.EmailId,lmObj.Password);
+            
+            return loginDl.Login(Emailid, Password);
             
 
         }

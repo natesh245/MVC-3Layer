@@ -1,4 +1,4 @@
-﻿@model onlinebanking.Models.Account
+﻿@model BussinessLayer.Models.AccountModel
 
 @{
     ViewBag.Title = "Details";
@@ -24,7 +24,7 @@
                     <td> </td>
                     <td>Total Available Balance</td>
                     
-                    <td>Rs. @Model.balance</td>
+                    <td>Rs. @Model.Balance</td>
 
                 </tr>
                 <tr>
@@ -44,17 +44,17 @@
                 </tr>
                 <tr>
                     <td>
-                        @Model.account_no
+                        @Model.AccountNo
                     </td>
                     <td>
-                        @Model.branch_id|   
+                        @Model.BranchId|   
                     </td>
                    
                     <td>
                         @Session["Name"]  
                     </td>
                     <td>
-                        Rs .@Model.balance
+                        Rs .@Model.Balance
                     </td>
                 </tr>
 

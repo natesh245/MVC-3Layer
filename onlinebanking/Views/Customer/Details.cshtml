@@ -1,4 +1,4 @@
-﻿@model onlinebanking.Models.Customer
+﻿@model BussinessLayer.Models.CustomerModel
 
 @{
     ViewBag.Title = "Details";
@@ -18,99 +18,99 @@
 
         <dl>
             <dt>
-                @Html.DisplayNameFor(model => model.customer_name)
+                @Html.DisplayNameFor(model => model.Name)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.customer_name)
+                @Html.DisplayFor(model => model.Name)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.fathers_name)
+                @Html.DisplayNameFor(model => model.FatherName)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.fathers_name)
+                @Html.DisplayFor(model => model.FatherName)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.date_of_birth)
+                @Html.DisplayNameFor(model => model.DateOfBirth)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.date_of_birth)
+                @Html.DisplayFor(model => model.DateOfBirth)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.customer_age)
+                @Html.DisplayNameFor(model => model.Age)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.customer_age)
+                @Html.DisplayFor(model => model.Age)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.martial_status)
+                @Html.DisplayNameFor(model => model.MaritalStatus)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.martial_status)
+                @Html.DisplayFor(model => model.MaritalStatus)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.customer_address)
+                @Html.DisplayNameFor(model => model.Address)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.customer_address)
+                @Html.DisplayFor(model => model.Address)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.customer_city)
+                @Html.DisplayNameFor(model => model.City)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.customer_city)
+                @Html.DisplayFor(model => model.City)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.customer_state)
+                @Html.DisplayNameFor(model => model.State)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.customer_state)
+                @Html.DisplayFor(model => model.State)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.customer_country)
+                @Html.DisplayNameFor(model => model.Country)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.customer_country)
+                @Html.DisplayFor(model => model.Country)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.pincode)
+                @Html.DisplayNameFor(model => model.Pincode)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.pincode)
+                @Html.DisplayFor(model => model.Pincode)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.phone)
+                @Html.DisplayNameFor(model => model.Phone)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.phone)
+                @Html.DisplayFor(model => model.Phone)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.email_id)
+                @Html.DisplayNameFor(model => model.EmailId)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.email_id)
+                @Html.DisplayFor(model => model.EmailId)
             </dd>
             <dd style="height:5rem;border-bottom:none;">
                 @Html.ActionLink("Edit ", "Edit", "Customer", new { id = @Session["customerid"] }, new { @class = "btn btn-primary" })
