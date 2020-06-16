@@ -39,17 +39,15 @@ namespace onlinebanking.Controllers
         [ActionName("Index")]
         public ActionResult Index_Post()
         {
-            LoginBusinessLayer lbObj = new LoginBusinessLayer();
-            LoginModel lmObj = new LoginModel();
-            UpdateModel(lmObj);
-           SqlDataReader sdr =lbObj.LoginUser(lmObj.EmailId,lmObj.Password);
-            if (sdr.Read())
+            try
             {
-                Session["customerid"] = sdr["id"].ToString();
-                Session["emailid"] = lmObj.EmailId.ToString();
-                Session["Name"] = sdr[1].ToString();
-                ViewData["isLoggedIn"] = "true";
-                LoginDataAccess.sqlCon.Close();
+                LoginBusinessLayer lbObj = new LoginBusinessLayer();
+                LoginModel lmObj = new LoginModel();
+                UpdateModel(lmObj);
+                lbObj.LoginUser(lmObj.EmailId, lmObj.Password);
+                Session["customerid"] = lbObj.CustomerId;
+                Session["Name"] = lbObj.Name;
+                Session["EmailId"] = lbObj.EmailId;
                 return RedirectToRoute(new
                 {
                     controller = "Account",
@@ -57,18 +55,15 @@ namespace onlinebanking.Controllers
                     id = Session["customerid"]
 
                 });
+
             }
-            else
+            catch
             {
-                ViewData["Message"] = "User Login Failed";
+                ViewData["Message"] = "Login Failed";
+                return View();
             }
-
-            LoginDataAccess.sqlCon.Close();
-            return View();
+            
         }
-
-      
-
-       
+  
     }
 }

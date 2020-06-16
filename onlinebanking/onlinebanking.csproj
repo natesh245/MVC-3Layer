@@ -131,8 +131,6 @@
     </Compile>
     <Compile Include="Models\FdDetails.cs" />
     <Compile Include="Models\FixedDepositClass.cs" />
-    <Compile Include="Models\Statements.cs" />
-    <Compile Include="Models\TransactionClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

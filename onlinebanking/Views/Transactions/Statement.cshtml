@@ -1,4 +1,4 @@
-﻿@model onlinebanking.Models.Statements
+﻿@model BussinessLayer.Models.StatementModel
 
 @{
     ViewBag.Title = "Statement";
@@ -18,36 +18,36 @@
 
             </h2>
 
-            @foreach (var listItem in Model.statementList)
+            @foreach (var statementItem in Model.statementList)
             {
 
 
                 <div class="statement-container">
-                    @if (Convert.ToInt64(listItem.CreditAccount) != Convert.ToInt64(Session["Accountno"]))
+                    @if (Convert.ToInt64(statementItem .CreditAccount) != Convert.ToInt64(Session["Accountno"]))
                     {
                         <ul class="debit">
                             <li>Debit Details</li>
-                            <li>Transaction Id:@Html.DisplayFor(item => listItem.Id)</li>
-                            <li>Paid To:@Html.DisplayFor(item => listItem.CreditAccount)</li>
-                            <li>Debit Amount:Rs @Html.DisplayFor(item => listItem.DebitAmount)</li>
-                            <li>Balance:Rs @Html.DisplayFor(item => listItem.DebitAccountBalance)</li>
-                            <li>Date:@Html.DisplayFor(item => listItem.DebitDate)</li>
+                            <li>Transaction Id:@Html.DisplayFor(item => statementItem .Id)</li>
+                            <li>Paid To:@Html.DisplayFor(item => statementItem .CreditAccount)</li>
+                            <li>Debit Amount:Rs @Html.DisplayFor(item => statementItem .DebitAmount)</li>
+                            <li>Balance:Rs @Html.DisplayFor(item => statementItem .DebitAccountBalance)</li>
+                            <li>Date:@Html.DisplayFor(item => statementItem .DebitDate)</li>
 
                         </ul>
 
                     }
 
 
-                    else if (Convert.ToInt64(listItem.CreditAccount) == Convert.ToInt64(Session["Accountno"]))
+                    else if (Convert.ToInt64(statementItem .CreditAccount) == Convert.ToInt64(Session["Accountno"]))
                     {
                         <ul class="credit">
                             <li>Credit Details</li>
-                            <li>Transaction Id:@Html.DisplayFor(item => listItem.IdCredit)</li>
-                            <li>Paid By:@Html.DisplayFor(item => listItem.DebitAccount)</li>
+                            <li>Transaction Id:@Html.DisplayFor(item => statementItem .IdCredit)</li>
+                            <li>Paid By:@Html.DisplayFor(item => statementItem .DebitAccount)</li>
 
-                            <li>Credit Amount:Rs @Html.DisplayFor(item => listItem.CreditAmount)</li>
-                            <li>Balance:Rs @Html.DisplayFor(item => listItem.CreditAccountBalance)</li>
-                            <li>Date:@Html.DisplayFor(item => listItem.CreditDate)</li>
+                            <li>Credit Amount:Rs @Html.DisplayFor(item => statementItem .CreditAmount)</li>
+                            <li>Balance:Rs @Html.DisplayFor(item => statementItem .CreditAccountBalance)</li>
+                            <li>Date:@Html.DisplayFor(item => statementItem .CreditDate)</li>
 
                         </ul>
                     }

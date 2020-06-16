@@ -6,19 +6,36 @@ using System.Threading.Tasks;
 using DataAccess;
 using BussinessLayer.Models;
 using System.Data.SqlClient;
+using System.Security.Authentication;
 
 namespace BussinessLayer
 {
     public class LoginBusinessLayer
     {
+        public int CustomerId;
+        public string EmailId;
+        public string Name;
          
-        public SqlDataReader LoginUser(string Emailid,string Password)
+        public void LoginUser(string Emailid,string Password)
         {
+            
             LoginDataAccess loginDl = new LoginDataAccess();
             
-            return loginDl.Login(Emailid, Password);
-            
+            SqlDataReader sdr= loginDl.Login(Emailid, Password);
+            if (sdr.Read())
+            {
+                 this.CustomerId = Convert.ToInt32(sdr["id"]);
+                this.EmailId =sdr["email_id"].ToString();
+                this.Name = sdr[1].ToString();
+                LoginDataAccess.sqlCon.Close();
 
+            }
+            else
+            {
+                LoginDataAccess.sqlCon.Close();
+                throw new Exception("Login Failed");
+            }
+        
         }
     }
 }
