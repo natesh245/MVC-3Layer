@@ -44,10 +44,13 @@
   <ItemGroup>
     <Compile Include="AccountBusinessLayer.cs" />
     <Compile Include="CustomerBusinessLayer.cs" />
+    <Compile Include="FdBusinessLayer.cs" />
     <Compile Include="LoginBusinessLayer.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\FdDetailsModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\OpenFdModel.cs" />
     <Compile Include="Models\StatementModel.cs" />
     <Compile Include="Models\TransactionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,4 +1,4 @@
-﻿@model onlinebanking.Models.FixedDepositClass
+﻿@model BussinessLayer.Models.OpenFdModel
 
 @{
     ViewBag.Title = "Index";
@@ -16,26 +16,26 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "error-text" })
         <div >
-            @Html.LabelFor(model => model.fd_amount, htmlAttributes: new { @class = "text-label" })
+            @Html.LabelFor(model => model.fdAmount, htmlAttributes: new { @class = "text-label" })
             
-                @Html.EditorFor(model => model.fd_amount, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.fd_amount, "", new { @class = "error-text" })
+                @Html.EditorFor(model => model.fdAmount, new { htmlAttributes = new { @class = "text-box-login" } })
+                @Html.ValidationMessageFor(model => model.fdAmount, "", new { @class = "error-text" })
             </div>
        
 
         <div >
-            @Html.LabelFor(model => model.duration, htmlAttributes: new { @class = "text-label" })
+            @Html.LabelFor(model => model.Duration, htmlAttributes: new { @class = "text-label" })
            
-                @Html.EditorFor(model => model.duration, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.duration, "", new { @class = "error-text" })
+                @Html.EditorFor(model => model.Duration, new { htmlAttributes = new { @class = "text-box-login" } })
+                @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "error-text" })
            
         </div>
 
         <div >
-            @Html.LabelFor(model => model.nominee, htmlAttributes: new { @class = "text-label" })
+            @Html.LabelFor(model => model.Nominee, htmlAttributes: new { @class = "text-label" })
            
-                @Html.EditorFor(model => model.nominee, new { htmlAttributes = new { @class = "text-box-login" } })
-                @Html.ValidationMessageFor(model => model.nominee, "", new { @class = "error-text" })
+                @Html.EditorFor(model => model.Nominee, new { htmlAttributes = new { @class = "text-box-login" } })
+                @Html.ValidationMessageFor(model => model.Nominee, "", new { @class = "error-text" })
            
         </div>
 

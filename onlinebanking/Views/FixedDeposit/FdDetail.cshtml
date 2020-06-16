@@ -1,4 +1,4 @@
-﻿@model onlinebanking.Models.FdDetails
+﻿@model BussinessLayer.Models.FdDetailsModel
 
 @{
     ViewBag.Title = "FdDetail";
@@ -20,86 +20,82 @@
 
                 @Html.ActionLink("Back ", "Details", "Account", new { id = @Session["customerid"] }, new { @class = "btn btn-primary",@style="margin-left:4rem;" })
             </p>
-           @if (Model.FdDetailList==null)
-            {
-                <h2 class="error-text">No Fixed Deposit</h2>
-
-            }
+          
             @foreach (var item in Model.FdDetailList)
             {
                 <div class="account-container">
 
                     <dl>
                         <dt>
-                            @Html.DisplayNameFor(model => item.account_no)
+                            @Html.DisplayNameFor(model => item.AccountNo)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => item.account_no)
+                            @Html.DisplayFor(model => item.AccountNo)
                         </dd>
 
                         <dt>
-                            @Html.DisplayNameFor(model => item.deposit_id)
+                            @Html.DisplayNameFor(model => item.DepositId)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => item.deposit_id)
+                            @Html.DisplayFor(model => item.DepositId)
                         </dd>
 
                         <dt>
-                            @Html.DisplayNameFor(model => item.fd_date)
+                            @Html.DisplayNameFor(model => item.FdDate)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => item.fd_date)
+                            @Html.DisplayFor(model => item.FdDate)
                         </dd>
 
                         <dt>
-                            @Html.DisplayNameFor(model => item.fd_amount)
+                            @Html.DisplayNameFor(model => item.FdAmount)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => item.fd_amount)
+                            @Html.DisplayFor(model => item.FdAmount)
                         </dd>
 
                         <dt>
-                            @Html.DisplayNameFor(model => item.duration)
+                            @Html.DisplayNameFor(model => item.Duration)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => item.duration)
+                            @Html.DisplayFor(model => item.Duration)
                         </dd>
 
                         <dt>
-                            @Html.DisplayNameFor(model => item.rate_of_interest)
+                            @Html.DisplayNameFor(model => item.RateOfInterest)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => item.rate_of_interest)
+                            @Html.DisplayFor(model => item.RateOfInterest)
                         </dd>
 
                         <dt>
-                            @Html.DisplayNameFor(model => item.maturity_date)
+                            @Html.DisplayNameFor(model => item.MaturityDate)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => item.maturity_date)
+                            @Html.DisplayFor(model => item.MaturityDate)
                         </dd>
 
                         <dt>
-                            @Html.DisplayNameFor(model => item.maturity_amount)
+                            @Html.DisplayNameFor(model => item.MaturityAmount)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => item.maturity_amount)
+                            @Html.DisplayFor(model => item.MaturityAmount)
                         </dd>
 
                         <dt>
-                            @Html.DisplayNameFor(model => item.nominee)
+                            @Html.DisplayNameFor(model => item.Nominee)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => item.nominee)
+                            @Html.DisplayFor(model => item.Nominee)
                         </dd>
 
                     </dl>
