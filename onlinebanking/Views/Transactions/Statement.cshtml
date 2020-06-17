@@ -18,43 +18,45 @@
 
             </h2>
 
-            @foreach (var statementItem in Model.statementList)
-            {
+            <div class="edit-container" style="height:50rem;">
+                @foreach (var statementItem in Model.statementList)
+                {
 
 
-                <div class="statement-container">
-                    @if (Convert.ToInt64(statementItem .CreditAccount) != Convert.ToInt64(Session["Accountno"]))
-                    {
-                        <ul class="debit">
-                            <li>Debit Details</li>
-                            <li>Transaction Id:@Html.DisplayFor(item => statementItem .Id)</li>
-                            <li>Paid To:@Html.DisplayFor(item => statementItem .CreditAccount)</li>
-                            <li>Debit Amount:Rs @Html.DisplayFor(item => statementItem .DebitAmount)</li>
-                            <li>Balance:Rs @Html.DisplayFor(item => statementItem .DebitAccountBalance)</li>
-                            <li>Date:@Html.DisplayFor(item => statementItem .DebitDate)</li>
+                    <div class="statement-container">
+                        @if (Convert.ToInt64(statementItem.CreditAccount) != Convert.ToInt64(Session["Accountno"]))
+                        {
+                            <ul class="debit">
+                                <li>Debit Details</li>
+                                <li>Transaction Id:@Html.DisplayFor(item => statementItem.Id)</li>
+                                <li>Paid To:@Html.DisplayFor(item => statementItem.CreditAccount)</li>
+                                <li>Debit Amount:Rs @Html.DisplayFor(item => statementItem.DebitAmount)</li>
+                                <li>Balance:Rs @Html.DisplayFor(item => statementItem.DebitAccountBalance)</li>
+                                <li>Date:@Html.DisplayFor(item => statementItem.DebitDate)</li>
 
-                        </ul>
+                            </ul>
 
-                    }
-
-
-                    else if (Convert.ToInt64(statementItem .CreditAccount) == Convert.ToInt64(Session["Accountno"]))
-                    {
-                        <ul class="credit">
-                            <li>Credit Details</li>
-                            <li>Transaction Id:@Html.DisplayFor(item => statementItem .IdCredit)</li>
-                            <li>Paid By:@Html.DisplayFor(item => statementItem .DebitAccount)</li>
-
-                            <li>Credit Amount:Rs @Html.DisplayFor(item => statementItem .CreditAmount)</li>
-                            <li>Balance:Rs @Html.DisplayFor(item => statementItem .CreditAccountBalance)</li>
-                            <li>Date:@Html.DisplayFor(item => statementItem .CreditDate)</li>
-
-                        </ul>
-                    }
+                        }
 
 
-                </div>
+                        else if (Convert.ToInt64(statementItem.CreditAccount) == Convert.ToInt64(Session["Accountno"]))
+                        {
+                            <ul class="credit">
+                                <li>Credit Details</li>
+                                <li>Transaction Id:@Html.DisplayFor(item => statementItem.IdCredit)</li>
+                                <li>Paid By:@Html.DisplayFor(item => statementItem.DebitAccount)</li>
 
-            }
+                                <li>Credit Amount:Rs @Html.DisplayFor(item => statementItem.CreditAmount)</li>
+                                <li>Balance:Rs @Html.DisplayFor(item => statementItem.CreditAccountBalance)</li>
+                                <li>Date:@Html.DisplayFor(item => statementItem.CreditDate)</li>
+
+                            </ul>
+                        }
+
+
+                    </div>
+
+                }
+            </div>
         </div>
     </div>

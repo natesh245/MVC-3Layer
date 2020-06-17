@@ -23,16 +23,19 @@ h2 ,h4{
     position: relative;
 }
 
-.account-container{
+div.account-container{
     display:flex;
     flex-direction:column;
+    margin:2rem auto;
+    width:100%;
 }
 
 .form-container {
-    width: 50%;
-    margin: 1rem auto;
+    width: 40%;
+    
     display: flex;
     flex-direction: column;
+    margin:auto;
  
 }
 
@@ -55,7 +58,7 @@ h2 ,h4{
 
 
 
-.welcome-header {
+h2.welcome-header {
     margin:0;
     padding: 1rem;
     text-align: center;
@@ -64,48 +67,52 @@ h2 ,h4{
 }
 
 .welcome-list {
-   
-    background-color: #6db4f2;
+    background-image: linear-gradient(to  bottom,rgba(15, 62, 215, 0.4),rgba(11, 228, 195, 0.5));
     width: 100%;
     height: 100vh;
     padding: 1rem;
-    margin:0;
-    
+    margin: 0;
 }
 
 
 .welcome-list-item {
     width: 100%;
-    background-color: #d3e0eb;
+    background-color: none;
     height: 5rem;
-    margin: 1rem auto;
+   
     padding: 1rem;
     text-decoration: none;
     text-align: center;
+    
 }
 
     .welcome-list-item:hover {
-        color: white !important;
-        border: 2px solid #275eb8;
+        background-color: #3483eb;
+        color:white;
     }
-
-
+.welcome-links{
+    color:black;
+}
 .welcome-links:link,
 .welcome-links:active {
-    width:100%;
-
+    width: 100%;
+    font-weight: bold;
     text-decoration: none;
     color: black;
     font-size: 2rem;
     padding: 1rem;
 }
-
-
-
-table {
-    margin: 5rem auto;
-    width: 80%;
+.welcome-links:hover {
+    color: white;
+   
 }
+
+
+
+    table {
+        margin: 5rem auto;
+        width: 80%;
+    }
 
     table tr {
         height: 5rem;

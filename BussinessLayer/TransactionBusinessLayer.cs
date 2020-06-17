@@ -14,16 +14,9 @@ namespace BussinessLayer
         public void SendMoney(long debit,long credit,int amount)
         {
             TransactionDataAccess tranDA = new TransactionDataAccess();
-            if(debit!=credit && amount > 0)
-            {
-                tranDA.InsertDetails(debit, credit, amount);
-            }
-            else
-            {
-                throw new Exception("Transaction Failed");
-            }
             
-
+                tranDA.InsertDetails(debit, credit, amount);
+          
         }
         public List<StatementModel> GetStatement(long Accountno)
         {

@@ -18,7 +18,7 @@
             {
                 @Html.AntiForgeryToken()
 
-                <div class="form-container form-grid">
+                <div class="form-container form-grid edit-container">
 
                     @Html.ValidationSummary(true, "", new { @class = "error-text" })
                     <div>
@@ -118,7 +118,7 @@
                     </div>
 
                     <div>
-                        <div>
+                        <div style="margin:4rem 7rem">
                             <input type="submit" value="Save" class="btn btn-primary" />
                             <h4 class="error-text">@ViewData["CustomerMessage"]</h4>
                         </div>
@@ -126,9 +126,7 @@
                 </div>
             }
 
-            <div>
-                @Html.ActionLink("Go to Account", "Details", "Account", new { id = @Session["customerid"] }, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
-            </div>
+            
         </div>
     </div>
 @section Scripts {

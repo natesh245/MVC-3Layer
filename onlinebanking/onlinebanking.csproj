@@ -154,10 +154,12 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Styles\AccountStyle.css" />
-    <Content Include="Styles\CustomerStyles.css" />
-    <Content Include="Styles\HomeStyles.css" />
+    <Content Include="Styles\CustomerStyle.css" />
+    <Content Include="Styles\HomeStyle.css" />
+    <Content Include="Styles\images\moneybank.jpg" />
+    <Content Include="Styles\images\Locker.jpg" />
     <Content Include="Styles\LoginStyle.css" />
-    <Content Include="Styles\StatementStyles.css" />
+    <Content Include="Styles\StatementStyle.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

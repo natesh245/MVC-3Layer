@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using BussinessLayer;
 using BussinessLayer.Models;
+using DataAccess;
 
 namespace onlinebanking.Controllers
 {
@@ -32,6 +33,7 @@ namespace onlinebanking.Controllers
                 UpdateModel(tranModel);
                 tranBL.SendMoney(Convert.ToInt64(Session["Accountno"]), tranModel.AccountNo, tranModel.Amount);
                 ViewData["Message"] = " Transaction Successfull";
+               
                 return View();
 
 
@@ -39,7 +41,7 @@ namespace onlinebanking.Controllers
             catch
             {
                 ViewData["Message"] = " Transaction Failed";
-
+                TransactionDataAccess.sqlCon.Close();
                 return View();
 
             }
@@ -53,7 +55,7 @@ namespace onlinebanking.Controllers
             StatementModel sModel = new StatementModel();
            List<StatementModel> tranList= sObj.GetStatement(Convert.ToInt64(Session["Accountno"]));
             sModel.statementList = tranList;
-
+           
             return View(sModel);
         }
        

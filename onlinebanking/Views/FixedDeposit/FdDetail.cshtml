@@ -13,95 +13,93 @@
             }
         </div>
         <div>
-            <h4>Fd Details</h4>
+            <h2>Fd Details</h2>
 
-            <hr />
-            <p>
+           
+            <div class="edit-container" >
 
-                @Html.ActionLink("Back ", "Details", "Account", new { id = @Session["customerid"] }, new { @class = "btn btn-primary",@style="margin-left:4rem;" })
-            </p>
-          
-            @foreach (var item in Model.FdDetailList)
-            {
-                <div class="account-container">
+                @foreach (var item in Model.FdDetailList)
+                {
+                    <div class="account-container">
 
-                    <dl>
-                        <dt>
-                            @Html.DisplayNameFor(model => item.AccountNo)
-                        </dt>
+                        <dl>
+                            <dt>
+                                @Html.DisplayNameFor(model => item.AccountNo)
+                            </dt>
 
-                        <dd>
-                            @Html.DisplayFor(model => item.AccountNo)
-                        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => item.AccountNo)
+                            </dd>
 
-                        <dt>
-                            @Html.DisplayNameFor(model => item.DepositId)
-                        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => item.DepositId)
+                            </dt>
 
-                        <dd>
-                            @Html.DisplayFor(model => item.DepositId)
-                        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => item.DepositId)
+                            </dd>
 
-                        <dt>
-                            @Html.DisplayNameFor(model => item.FdDate)
-                        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => item.FdDate)
+                            </dt>
 
-                        <dd>
-                            @Html.DisplayFor(model => item.FdDate)
-                        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => item.FdDate)
+                            </dd>
 
-                        <dt>
-                            @Html.DisplayNameFor(model => item.FdAmount)
-                        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => item.FdAmount)
+                            </dt>
 
-                        <dd>
-                            @Html.DisplayFor(model => item.FdAmount)
-                        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => item.FdAmount)
+                            </dd>
 
-                        <dt>
-                            @Html.DisplayNameFor(model => item.Duration)
-                        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => item.Duration)
+                            </dt>
 
-                        <dd>
-                            @Html.DisplayFor(model => item.Duration)
-                        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => item.Duration)
+                            </dd>
 
-                        <dt>
-                            @Html.DisplayNameFor(model => item.RateOfInterest)
-                        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => item.RateOfInterest)
+                            </dt>
 
-                        <dd>
-                            @Html.DisplayFor(model => item.RateOfInterest)
-                        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => item.RateOfInterest)
+                            </dd>
 
-                        <dt>
-                            @Html.DisplayNameFor(model => item.MaturityDate)
-                        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => item.MaturityDate)
+                            </dt>
 
-                        <dd>
-                            @Html.DisplayFor(model => item.MaturityDate)
-                        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => item.MaturityDate)
+                            </dd>
 
-                        <dt>
-                            @Html.DisplayNameFor(model => item.MaturityAmount)
-                        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => item.MaturityAmount)
+                            </dt>
 
-                        <dd>
-                            @Html.DisplayFor(model => item.MaturityAmount)
-                        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => item.MaturityAmount)
+                            </dd>
 
-                        <dt>
-                            @Html.DisplayNameFor(model => item.Nominee)
-                        </dt>
+                            <dt>
+                                @Html.DisplayNameFor(model => item.Nominee)
+                            </dt>
 
-                        <dd>
-                            @Html.DisplayFor(model => item.Nominee)
-                        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => item.Nominee)
+                            </dd>
 
-                    </dl>
-                </div>
+                        </dl>
+                    </div>
 
-            }
+                }
+            </div>
 
         </div>
 </div>
