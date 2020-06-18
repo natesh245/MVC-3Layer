@@ -64,6 +64,24 @@ namespace onlinebanking.Controllers
             }
             
         }
-  
+
+        public ActionResult ChangePassword()
+        {
+            ViewData["Message"] = "";
+            return View();
+        }
+
+        [HttpPost]
+        [ActionName("ChangePassword")]
+        public ActionResult Change_Password()
+        {
+            LoginBusinessLayer lbObj = new LoginBusinessLayer();
+            LoginModel lmObj = new LoginModel();
+            UpdateModel(lmObj);
+            lbObj.ChangePassword(lmObj.EmailId, lmObj.Password);
+            ViewData["Message"] = "Password Changed Successfully";
+            return View();
+        }
+
     }
 }

@@ -31,7 +31,7 @@ namespace BussinessLayer
 
                 fObj.DepositId = Convert.ToInt32(ds.Tables[0].Rows[i]["deposit_id"].ToString());
 
-                fObj.FdDate = ds.Tables[0].Rows[i]["fd_date"].ToString();
+                fObj.FdDate =Convert.ToDateTime( ds.Tables[0].Rows[i]["fd_date"]);
 
                 fObj.FdAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["fd_amount"].ToString());
 
@@ -39,7 +39,7 @@ namespace BussinessLayer
 
                 fObj.RateOfInterest = Convert.ToInt64(ds.Tables[0].Rows[i]["rate_of_interest"].ToString());
 
-                fObj.MaturityDate = ds.Tables[0].Rows[i]["maturity_date"].ToString();
+                fObj.MaturityDate = Convert.ToDateTime(ds.Tables[0].Rows[i]["maturity_date"].ToString());
 
                 fObj.MaturityAmount = Convert.ToInt32(ds.Tables[0].Rows[i]["maturity_amount"].ToString());
 

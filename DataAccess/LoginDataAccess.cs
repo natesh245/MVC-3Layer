@@ -25,6 +25,18 @@ namespace DataAccess
             SqlDataReader sdr = sqlCmd.ExecuteReader();
             return sdr;
         }
+
+        public void  UpdatePassword(string emailid,string password)
+        {
+            string sqlQuery = "UPDATE CUSTOMER SET user_password=@password where email_id=@EmailId";
+            sqlCon.Open();
+            SqlCommand sqlCmd = new SqlCommand(sqlQuery, sqlCon);
+            sqlCmd.Parameters.AddWithValue("@EmailId", emailid);
+            sqlCmd.Parameters.AddWithValue("@password", password);
+            sqlCmd.ExecuteNonQuery();
+            sqlCon.Close();
+
+        }
       
     }
 }

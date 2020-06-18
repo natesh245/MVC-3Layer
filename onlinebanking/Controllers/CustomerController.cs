@@ -19,7 +19,7 @@ namespace onlinebanking.Controllers
             CustomerBusinessLayer cusBl = new CustomerBusinessLayer();
            
            CustomerModel cusModel=cusBl.GetCustomerDetails(id);
-
+            CustomerDataAccess.sqlCon.Close();
             return View(cusModel);
         }
 
@@ -31,6 +31,7 @@ namespace onlinebanking.Controllers
             CustomerModel cusModel = cusBl.DisplayEditCustomer(id);
           
             ViewData["CustomerMessage"] = "";
+            CustomerDataAccess.sqlCon.Close();
             return View(cusModel);
 
         }
@@ -47,6 +48,7 @@ namespace onlinebanking.Controllers
                 cusModel.Country,cusModel.Pincode,cusModel.Phone,cusModel.EmailId);
             
             ViewData["CustomerMessage"] = "Changes Saved Successfully";
+            CustomerDataAccess.sqlCon.Close();
             return View();
 
 

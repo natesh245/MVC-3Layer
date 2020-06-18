@@ -37,5 +37,11 @@ namespace BussinessLayer
             }
         
         }
+
+        public void ChangePassword(string email,string password)
+        {
+            LoginDataAccess ldac = new LoginDataAccess();
+            ldac.UpdatePassword(email,password);
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace DataAccess
             return sdr;
         }
 
-        public void EditDetails(int Id,string Name,string FatherName,string DOB,int Age,string status,string Address,string City,string State,string Country,int Pincode,long Phone,string EmailId)
+        public void EditDetails(int Id,string Name,string FatherName,DateTime DOB,int Age,string status,string Address,string City,string State,string Country,int Pincode,long Phone,string EmailId)
         {
             
             sqlCon.Open();

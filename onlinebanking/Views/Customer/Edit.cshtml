@@ -38,17 +38,19 @@
                     </div>
 
                     <div>
-                        @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "text-label" })
+                        
                         <div>
-                            @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "text-box-login" } })
+                           
+                            @Html.HiddenFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "text-box-login" } })
                             @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "error-text" })
                         </div>
                     </div>
 
                     <div>
-                        @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "text-label" })
+                       
                         <div>
-                            @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "text-box-login" } })
+                           
+                            @Html.HiddenFor(model => model.Age, new { htmlAttributes = new { @class = "text-box-login" } })
                             @Html.ValidationMessageFor(model => model.Age, "", new { @class = "error-text" })
                         </div>
                     </div>

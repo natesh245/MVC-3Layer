@@ -184,6 +184,7 @@
     <Content Include="Views\Shared\_TopNavBar.cshtml" />
     <Content Include="Views\FixedDeposit\Index.cshtml" />
     <Content Include="Views\FixedDeposit\FdDetail.cshtml" />
+    <Content Include="Views\Login\ChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

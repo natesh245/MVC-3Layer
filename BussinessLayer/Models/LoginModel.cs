@@ -16,6 +16,7 @@ namespace BussinessLayer.Models
 
         [Required(ErrorMessage = "Please enter the Password")]
         [Display(Name = "Password")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
     }
 }

@@ -15,7 +15,8 @@ namespace BussinessLayer.Models
 		[Display(Name = "Deposit Id")]
 		public int DepositId { get; set; }
 		[Display(Name = "Fd Date")]
-		public string FdDate { get; set; }
+		[DisplayFormat(ApplyFormatInEditMode = false, DataFormatString = "{0:dd/MM/yyyy}")]
+		public DateTime FdDate { get; set; }
 		[Display(Name = "Fd Amount")]
 		public decimal FdAmount { get; set; }
 		[Display(Name = "Duration")]
@@ -23,7 +24,8 @@ namespace BussinessLayer.Models
 		[Display(Name = "Rate of interest(%)")]
 		public decimal RateOfInterest { get; set; }
 		[Display(Name = "Maturity Date")]
-		public string MaturityDate { get; set; }
+		[DisplayFormat(ApplyFormatInEditMode = false, DataFormatString = "{0:dd/MM/yyyy}")]
+		public DateTime MaturityDate { get; set; }
 		[Display(Name = "Maturity Amount")]
 		public decimal MaturityAmount { get; set; }
 		[Display(Name = "Nominee")]
