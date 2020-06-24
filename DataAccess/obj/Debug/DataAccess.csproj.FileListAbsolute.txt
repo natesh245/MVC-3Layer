@@ -3,3 +3,8 @@ C:\Users\HP\Desktop\practice-project\MVC-Project\DataAccess\bin\Debug\DataAccess
 C:\Users\HP\Desktop\practice-project\MVC-Project\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
 C:\Users\HP\Desktop\practice-project\MVC-Project\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\HP\Desktop\practice-project\MVC-Project\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\DataAccess\obj\Debug\DataAccess.pdb

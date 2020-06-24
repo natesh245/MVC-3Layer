@@ -14,7 +14,7 @@
         <div class="account-container">
             <h2>
                 Account Statement <br />
-                <span style="color:green;">@Session["Name"]-@Session["Accountno"]</span>
+                                  <span style="color:green;">@Session["LastName"] @Session["FirstName"]-@Session["Accountno"]</span>
 
             </h2>
           
@@ -30,11 +30,11 @@
                         {
                             <ul class="debit">
                                 <li>Debit Details</li>
-                                <li>Transaction Id:@Html.DisplayFor(item => statementItem.Id)</li>
+                                <li>Transaction Id:@Html.DisplayFor(item => statementItem.TransactionId)</li>
                                 <li>Paid To:@Html.DisplayFor(item => statementItem.CreditAccount)</li>
-                                <li>Debit Amount:Rs @Html.DisplayFor(item => statementItem.DebitAmount)</li>
+                                <li>Debit Amount:Rs @Html.DisplayFor(item => statementItem.Amount)</li>
                                 <li>Balance:Rs @Html.DisplayFor(item => statementItem.DebitAccountBalance)</li>
-                                <li>Date:@Html.DisplayFor(item => statementItem.DebitDate)</li>
+                                <li>Date:@Html.DisplayFor(item => statementItem.TransactionDate)</li>
 
                             </ul>
 
@@ -45,12 +45,12 @@
                         {
                             <ul class="credit">
                                 <li>Credit Details</li>
-                                <li>Transaction Id:@Html.DisplayFor(item => statementItem.IdCredit)</li>
+                                <li>Transaction Id:@Html.DisplayFor(item => statementItem.TransactionId)</li>
                                 <li>Paid By:@Html.DisplayFor(item => statementItem.DebitAccount)</li>
 
-                                <li>Credit Amount:Rs @Html.DisplayFor(item => statementItem.CreditAmount)</li>
+                                <li>Credit Amount:Rs @Html.DisplayFor(item => statementItem.Amount)</li>
                                 <li>Balance:Rs @Html.DisplayFor(item => statementItem.CreditAccountBalance)</li>
-                                <li>Date:@Html.DisplayFor(item => statementItem.CreditDate)</li>
+                                <li>Date:@Html.DisplayFor(item => statementItem.TransactionDate)</li>
 
                             </ul>
                         }

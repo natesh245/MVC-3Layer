@@ -21,7 +21,8 @@ namespace onlinebanking.Controllers
         {
             Session["customerid"] = null;
             Session["emailid"] = null;
-            Session["Name"] = null;
+            Session["FirstName"] = null;
+            Session["LastName"] = null;
             Session["Accountno"] = null;
             return RedirectToAction("Index");
 
@@ -46,7 +47,8 @@ namespace onlinebanking.Controllers
                 UpdateModel(lmObj);
                 lbObj.LoginUser(lmObj.EmailId, lmObj.Password);
                 Session["customerid"] = lbObj.CustomerId;
-                Session["Name"] = lbObj.Name;
+                Session["FirstName"] = lbObj.FirstName;
+                Session["LastName"] = lbObj.LastName;
                 Session["EmailId"] = lbObj.EmailId;
                 return RedirectToRoute(new
                 {

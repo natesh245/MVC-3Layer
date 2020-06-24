@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class CustomerDataAccess
     {
-        public static string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+        public static string con = ConfigurationManager.ConnectionStrings["OnlineBanking"].ConnectionString;
         public static SqlConnection sqlCon = new SqlConnection(con);
 
         public SqlDataReader ReadDetails(int Id)
@@ -33,19 +33,20 @@ namespace DataAccess
             return sdr;
         }
 
-        public void EditDetails(int Id,string Name,string FatherName,DateTime DOB,int Age,string status,string Address,string City,string State,string Country,int Pincode,long Phone,string EmailId,string gender)
+        public void EditDetails(int Id,string FirstName, string LastName, string FatherName,DateTime DOB,int Age,string status,string Address,string City,string State,string Country,int Pincode,long Phone,string EmailId)
         {
             
             sqlCon.Open();
             SqlCommand sqlCmd = new SqlCommand("p_update_customer_details", sqlCon);
             sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
             sqlCmd.Parameters.AddWithValue("@ID", Id);
-            sqlCmd.Parameters.AddWithValue("@Name", Name);
+            sqlCmd.Parameters.AddWithValue("@FIRST_Name", FirstName);
+            sqlCmd.Parameters.AddWithValue("@LAST_Name", LastName);
             sqlCmd.Parameters.AddWithValue("@FATHERS_NAME", FatherName);
-            sqlCmd.Parameters.AddWithValue("@GENDER", gender);
+            
             sqlCmd.Parameters.AddWithValue("@DOB", DOB);
             sqlCmd.Parameters.AddWithValue("@AGE", Age);
-            sqlCmd.Parameters.AddWithValue("@MARTIAL_STATUS", status);
+            sqlCmd.Parameters.AddWithValue("@MARITAL_STATUS", status);
             sqlCmd.Parameters.AddWithValue("@ADDRESS", Address);
             sqlCmd.Parameters.AddWithValue("@CITY", City);
             sqlCmd.Parameters.AddWithValue("@STATE", State);

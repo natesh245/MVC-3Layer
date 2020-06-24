@@ -14,8 +14,9 @@ namespace BussinessLayer
     {
         public int CustomerId;
         public string EmailId;
-        public string Name;
-         
+        public string FirstName;
+        public string LastName;
+
         public void LoginUser(string Emailid,string Password)
         {
             
@@ -26,7 +27,8 @@ namespace BussinessLayer
             {
                  this.CustomerId = Convert.ToInt32(sdr["id"]);
                 this.EmailId =sdr["email_id"].ToString();
-                this.Name = sdr[1].ToString();
+                this.FirstName = sdr["customer_first_name"].ToString();
+                this.LastName = sdr["customer_last_name"].ToString();
                 LoginDataAccess.sqlCon.Close();
 
             }

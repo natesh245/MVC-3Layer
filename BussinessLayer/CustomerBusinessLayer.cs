@@ -18,12 +18,13 @@ namespace BussinessLayer
             CustomerModel cusModel = new CustomerModel();
             if (sdr.Read())
             {
-                cusModel.Name = sdr["customer_name"].ToString();
-                cusModel.FatherName = sdr["fathers_name"].ToString();
-                cusModel.Gender = sdr["gender"].ToString();
+                cusModel.FirstName = sdr["customer_first_name"].ToString();
+                cusModel.LastName = sdr["customer_last_name"].ToString();
+                cusModel.FatherName = sdr["customer_father_name"].ToString();
+                cusModel.Gender = sdr["customer_gender"].ToString();
                 cusModel.DateOfBirth = Convert.ToDateTime(sdr["date_of_birth"]);
                 cusModel.Age = Convert.ToInt32(sdr["customer_age"]);
-                cusModel.MaritalStatus = sdr["martial_status"].ToString();
+                cusModel.MaritalStatus = sdr["marital_status"].ToString();
                 cusModel.Address = sdr["customer_address"].ToString();
                 cusModel.City = sdr["customer_city"].ToString();
                 cusModel.State = sdr["customer_state"].ToString();
@@ -47,12 +48,13 @@ namespace BussinessLayer
             if (sdr.Read())
             {
 
-                cusModel.Name = sdr["customer_name"].ToString();
-                cusModel.FatherName = sdr["fathers_name"].ToString();
+                cusModel.FirstName = sdr["customer_first_name"].ToString();
+                cusModel.LastName = sdr["customer_last_name"].ToString();
+                cusModel.FatherName = sdr["customer_father_name"].ToString();
                 cusModel.DateOfBirth = Convert.ToDateTime(sdr["date_of_birth"]);
-                cusModel.Gender = sdr["gender"].ToString();
+                cusModel.Gender = sdr["customer_gender"].ToString();
                 cusModel.Age = Convert.ToInt32(sdr["customer_age"]);
-                cusModel.MaritalStatus = sdr["martial_status"].ToString();
+                cusModel.MaritalStatus = sdr["marital_status"].ToString();
                 cusModel.Address = sdr["customer_address"].ToString();
                 cusModel.City = sdr["customer_city"].ToString();
                 cusModel.State = sdr["customer_state"].ToString();
@@ -67,12 +69,12 @@ namespace BussinessLayer
             return cusModel;
         }
 
-        public void EditCustomerDetails(int id,string name,string fn,DateTime dob,int age,string Ms,
-            string address,string city,string state ,string country,int pincode,long phone,string emailid,string gender)
+        public void EditCustomerDetails(int id,string firstname, string lastname,string fn,DateTime dob,int age,string Ms,
+            string address,string city,string state ,string country,int pincode,long phone,string emailid)
         {
             CustomerDataAccess cusDl = new CustomerDataAccess();
-            cusDl.EditDetails(id,name,fn,dob,age,Ms,address,city,state,country,pincode,
-                phone,emailid,gender);
+            cusDl.EditDetails(id, firstname, lastname, fn,dob,age,Ms,address,city,state,country,pincode,
+                phone,emailid);
             CustomerDataAccess.sqlCon.Close();
         }
     }

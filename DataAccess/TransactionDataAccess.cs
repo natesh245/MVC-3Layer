@@ -12,7 +12,7 @@ namespace DataAccess
 {
     public class TransactionDataAccess
     {
-        public static string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+        public static string con = ConfigurationManager.ConnectionStrings["OnlineBanking"].ConnectionString;
       public static SqlConnection sqlCon = new SqlConnection(con);
         public void InsertDetails(long DebitNo,long CreditNo,int Amount)
         {

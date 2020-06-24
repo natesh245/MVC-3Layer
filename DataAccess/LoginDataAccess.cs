@@ -11,13 +11,13 @@ namespace DataAccess
 {
     public class LoginDataAccess
     {
-         public static string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+         public static string con = ConfigurationManager.ConnectionStrings["OnlineBanking"].ConnectionString;
         public static SqlConnection sqlCon = new SqlConnection(con);
 
         public SqlDataReader Login(string emailId, string Password)
         {
 
-            string sqlQuery = "select id,customer_name, email_id,user_password from CUSTOMER where email_id=@EmailId and user_password=@UserPasssword";
+            string sqlQuery = "select id,customer_first_name,customer_last_name, email_id,customer_password from CUSTOMER where email_id=@EmailId and customer_password=@UserPasssword";
             sqlCon.Open();
             SqlCommand sqlCmd = new SqlCommand(sqlQuery, sqlCon);
             sqlCmd.Parameters.AddWithValue("@EmailId",emailId);
@@ -28,7 +28,7 @@ namespace DataAccess
 
         public void  UpdatePassword(string emailid,string password)
         {
-            string sqlQuery = "UPDATE CUSTOMER SET user_password=@password where email_id=@EmailId";
+            string sqlQuery = "UPDATE CUSTOMER SET customer_password=@password where email_id=@EmailId";
             sqlCon.Open();
             SqlCommand sqlCmd = new SqlCommand(sqlQuery, sqlCon);
             sqlCmd.Parameters.AddWithValue("@EmailId", emailid);

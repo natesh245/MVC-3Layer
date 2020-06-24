@@ -22,10 +22,18 @@
 
             @Html.ValidationSummary(true, "", new { @class = "error-text" })
             <div>
-                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "text-label" })
+                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "text-label" })
                 <div>
-                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "text-box-login" } })
-                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "error-text" })
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "text-box-login" } })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "error-text" })
+                </div>
+            </div>
+
+            <div>
+                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "text-box-login" } })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "error-text" })
                 </div>
             </div>
 
@@ -38,23 +46,7 @@
             </div>
 
 
-            <div>
 
-                <div>
-
-                    @Html.HiddenFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "text-box-login" } })
-                    @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "error-text" })
-                </div>
-            </div>
-
-            <div>
-
-                <div>
-
-                    @Html.HiddenFor(model => model.Age, new { htmlAttributes = new { @class = "text-box-login" } })
-                    @Html.ValidationMessageFor(model => model.Age, "", new { @class = "error-text" })
-                </div>
-            </div>
 
 
             <div>
@@ -126,6 +118,23 @@
 
                     @Html.HiddenFor(model => model.Gender, new { htmlAttributes = new { @class = "text-box-login" } })
                     @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "error-text" })
+                </div>
+            </div>
+            <div>
+
+                <div>
+
+                    @Html.HiddenFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "text-box-login" } })
+                    @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "error-text" })
+                </div>
+            </div>
+
+            <div>
+
+                <div>
+
+                    @Html.HiddenFor(model => model.Age, new { htmlAttributes = new { @class = "text-box-login" } })
+                    @Html.ValidationMessageFor(model => model.Age, "", new { @class = "error-text" })
                 </div>
             </div>
 

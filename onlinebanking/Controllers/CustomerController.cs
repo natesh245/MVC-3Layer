@@ -43,9 +43,9 @@ namespace onlinebanking.Controllers
             CustomerBusinessLayer cusBl = new CustomerBusinessLayer();
             CustomerModel cusModel = new CustomerModel();
             UpdateModel(cusModel);
-            cusBl.EditCustomerDetails(id,cusModel.Name,cusModel.FatherName,cusModel.DateOfBirth,
+            cusBl.EditCustomerDetails(id,cusModel.FirstName, cusModel.LastName,cusModel.FatherName,cusModel.DateOfBirth,
                 cusModel.Age,cusModel.MaritalStatus,cusModel.Address,cusModel.City,cusModel.State,
-                cusModel.Country,cusModel.Pincode,cusModel.Phone,cusModel.EmailId,cusModel.Gender);
+                cusModel.Country,cusModel.Pincode,cusModel.Phone,cusModel.EmailId);
             
             ViewData["CustomerMessage"] = "Changes Saved Successfully";
             CustomerDataAccess.sqlCon.Close();

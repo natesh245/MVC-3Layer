@@ -11,7 +11,7 @@ namespace DataAccess
 {
     public class FdDataAccess
     {
-        public static string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+        public static string con = ConfigurationManager.ConnectionStrings["OnlineBanking"].ConnectionString;
         public static SqlConnection sqlCon = new SqlConnection(con);
         public void Create(long AccountNo,int Amount,int duration,string Nominee)
         {

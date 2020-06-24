@@ -26,17 +26,15 @@ namespace BussinessLayer
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 StatementModel uobj = new StatementModel();
-                uobj.Id = Convert.ToInt32(ds.Tables[0].Rows[i]["id"].ToString());
-                uobj.IdCredit = Convert.ToInt32(ds.Tables[0].Rows[i]["id_debit"].ToString());
-
+                uobj.TransactionId = Convert.ToInt32(ds.Tables[0].Rows[i]["transaction_id"].ToString());
                 uobj.DebitAccount = Convert.ToInt64(ds.Tables[0].Rows[i]["debit_account_no"].ToString());
                 uobj.CreditAccount = Convert.ToInt64(ds.Tables[0].Rows[i]["credit_account_no"].ToString());
                 uobj.DebitAccountBalance = Convert.ToInt64(ds.Tables[0].Rows[i]["debit_account_balance"].ToString());
                 uobj.CreditAccountBalance = Convert.ToInt64(ds.Tables[0].Rows[i]["credit_account_balance"].ToString());
-                uobj.DebitAmount = Convert.ToInt32(ds.Tables[0].Rows[i]["debit_amount"].ToString());
-                uobj.CreditAmount = Convert.ToInt32(ds.Tables[0].Rows[i]["credit_amount"].ToString());
-                uobj.DebitDate = ds.Tables[0].Rows[i]["debit_date_time"].ToString();
-                uobj.CreditDate = ds.Tables[0].Rows[i]["credit_date_time"].ToString();
+                uobj.Amount = Convert.ToInt32(ds.Tables[0].Rows[i]["amount"].ToString());
+          
+                uobj.TransactionDate = ds.Tables[0].Rows[i]["transaction_date_time"].ToString();
+              
 
                 Transactionlist.Add(uobj);
             }

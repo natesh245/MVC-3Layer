@@ -13,7 +13,7 @@
 
         <div class="account-container">
             <h2 class="welcome-header">
-                Welcome @Session["Name"]
+                Welcome @Session["FirstName"] @Session["LastName"]
                 @Html.ActionLink("Log Out", "Logout", "Login", null, new { @class = "btn btn-primary", @style = "float:right;" })
             </h2>
             <h2>Account Details</h2>
@@ -51,7 +51,7 @@
                     </td>
                    
                     <td>
-                        @Session["Name"]  
+                        @Session["FirstName"] @Session["LastName"]
                     </td>
                     <td>
                         Rs .@Model.Balance

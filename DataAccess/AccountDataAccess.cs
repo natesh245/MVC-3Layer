@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class AccountDataAccess
     {
-       public static string con = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+       public static string con = ConfigurationManager.ConnectionStrings["OnlineBanking"].ConnectionString;
         public static SqlConnection sqlCon = new SqlConnection(con);
         public SqlDataReader ReadDetail(int Id)
         {

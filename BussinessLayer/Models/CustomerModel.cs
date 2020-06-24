@@ -10,8 +10,12 @@ namespace BussinessLayer.Models
     public class CustomerModel
     {
         [Required(ErrorMessage = "Name is Required")]
-        [Display(Name = "Name")]
-        public string Name { get; set; }
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Last Name is Required")]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
 
         [Required(ErrorMessage = "Fathers Name is Required")]
         [Display(Name = "Father Name")]

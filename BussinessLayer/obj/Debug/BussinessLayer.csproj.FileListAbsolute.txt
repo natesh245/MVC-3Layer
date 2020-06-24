@@ -6,3 +6,11 @@ C:\Users\HP\Desktop\practice-project\MVC-Project\BussinessLayer\obj\Debug\Bussin
 C:\Users\HP\Desktop\practice-project\MVC-Project\BussinessLayer\obj\Debug\BussinessLayer.csproj.CopyComplete
 C:\Users\HP\Desktop\practice-project\MVC-Project\BussinessLayer\obj\Debug\BussinessLayer.dll
 C:\Users\HP\Desktop\practice-project\MVC-Project\BussinessLayer\obj\Debug\BussinessLayer.pdb
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\BussinessLayer\bin\Debug\DataAccess.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\BussinessLayer\bin\Debug\DataAccess.pdb
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\BussinessLayer\obj\Debug\BussinessLayer.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\BussinessLayer\obj\Debug\BussinessLayer.csproj.CopyComplete
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\BussinessLayer\obj\Debug\BussinessLayer.pdb
