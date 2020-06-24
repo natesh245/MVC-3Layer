@@ -17,14 +17,7 @@
                 <span style="color:green;">@Session["Name"]-@Session["Accountno"]</span>
 
             </h2>
-            <h3>
-                @Html.DropDownList("Filter",new List<SelectListItem>
-           {
-               new SelectListItem{Text="Debit",Value="1",Selected=true},
-               new SelectListItem{Text="Credit",Value="2"},
-               new SelectListItem{Text="Both",Value="3"}
-           },"Select type",htmlAttributes:new { @class="form-control",@style="margin:1rem 7rem"})
-            </h3>
+          
           
 
             <div class="edit-container" style="height:35rem;">

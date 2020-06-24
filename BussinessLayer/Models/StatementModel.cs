@@ -20,5 +20,7 @@ namespace BussinessLayer.Models
         public string DebitDate { get; set; }
         public string CreditDate { get; set; }
 
+       
+
     }
 }

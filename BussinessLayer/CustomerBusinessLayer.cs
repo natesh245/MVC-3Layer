@@ -20,6 +20,7 @@ namespace BussinessLayer
             {
                 cusModel.Name = sdr["customer_name"].ToString();
                 cusModel.FatherName = sdr["fathers_name"].ToString();
+                cusModel.Gender = sdr["gender"].ToString();
                 cusModel.DateOfBirth = Convert.ToDateTime(sdr["date_of_birth"]);
                 cusModel.Age = Convert.ToInt32(sdr["customer_age"]);
                 cusModel.MaritalStatus = sdr["martial_status"].ToString();
@@ -49,6 +50,7 @@ namespace BussinessLayer
                 cusModel.Name = sdr["customer_name"].ToString();
                 cusModel.FatherName = sdr["fathers_name"].ToString();
                 cusModel.DateOfBirth = Convert.ToDateTime(sdr["date_of_birth"]);
+                cusModel.Gender = sdr["gender"].ToString();
                 cusModel.Age = Convert.ToInt32(sdr["customer_age"]);
                 cusModel.MaritalStatus = sdr["martial_status"].ToString();
                 cusModel.Address = sdr["customer_address"].ToString();
@@ -66,11 +68,11 @@ namespace BussinessLayer
         }
 
         public void EditCustomerDetails(int id,string name,string fn,DateTime dob,int age,string Ms,
-            string address,string city,string state ,string country,int pincode,long phone,string emailid)
+            string address,string city,string state ,string country,int pincode,long phone,string emailid,string gender)
         {
             CustomerDataAccess cusDl = new CustomerDataAccess();
             cusDl.EditDetails(id,name,fn,dob,age,Ms,address,city,state,country,pincode,
-                phone,emailid);
+                phone,emailid,gender);
             CustomerDataAccess.sqlCon.Close();
         }
     }

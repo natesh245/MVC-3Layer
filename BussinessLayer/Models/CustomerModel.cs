@@ -24,6 +24,9 @@ namespace BussinessLayer.Models
         [Display(Name = "Age")]
         public int Age { get; set; }
 
+      
+        public string Gender { get; set; }
+
         [Display(Name = "Marital Status")]
         [Required(ErrorMessage = "Martial Status is Required")]
         public string MaritalStatus { get; set; }
