@@ -11,10 +11,39 @@ namespace BussinessLayer
 {
     public class FdBusinessLayer
     {
-        public void OpenFd(long accountno,int amount,int duration ,string nominee)
+        public void OpenFd(long accountno,int amount,int duration , string nominee, string rel)
         {
+             double roi;
+             int maturityAmount;
+           
+
             FdDataAccess fdDac = new FdDataAccess();
-            fdDac.Create(accountno, amount, duration, nominee);
+            if (duration >= 6 && duration <= 7)
+            {
+                roi = 4;
+                
+                maturityAmount =Convert.ToInt32( amount+ (amount * roi * duration / 100));
+            }
+            else if (duration >= 8 && duration <= 12)
+            {
+               roi = 4.5;
+
+              maturityAmount =Convert.ToInt32( amount + (amount * roi * duration / 100));
+
+            }
+            else
+            {
+                 roi = 5;
+
+                 maturityAmount = Convert.ToInt32(amount + (amount * roi * duration / 100));
+            }
+
+            DateTime today = DateTime.Today;
+            DateTime dt = new DateTime(today.Year, today.Month, today.Day, 16, 0, 0);
+
+        
+            
+            fdDac.Create(accountno, amount, duration,roi, maturityAmount, nominee, rel);
 
         }
 

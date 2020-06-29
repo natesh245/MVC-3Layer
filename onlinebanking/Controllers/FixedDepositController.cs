@@ -31,7 +31,7 @@ namespace onlinebanking.Controllers
                 
                 UpdateModel(oFdModel);
                 FdBusinessLayer fdBl = new FdBusinessLayer();
-                fdBl.OpenFd(Convert.ToInt64(Session["Accountno"]),oFdModel.fdAmount,oFdModel.Duration,oFdModel.Nominee);
+                fdBl.OpenFd(Convert.ToInt64(Session["Accountno"]),oFdModel.fdAmount,oFdModel.Duration,oFdModel.Nominee,oFdModel.NomineeRelation);
                 ViewData["Message"] = "Fixed deposit created Successfully";
                 return View();
 

@@ -13,15 +13,19 @@ namespace DataAccess
     {
         public static string con = ConfigurationManager.ConnectionStrings["OnlineBanking"].ConnectionString;
         public static SqlConnection sqlCon = new SqlConnection(con);
-        public void Create(long AccountNo,int Amount,int duration,string Nominee)
+        public void Create(long AccountNo,int Amount,int duration,double rof,int ma, string Nominee,string Relation)
         {
             sqlCon.Open();
             SqlCommand sqlCmd = new SqlCommand("fixed_deposit_sp", sqlCon);
-            sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCmd.CommandType = CommandType.StoredProcedure;
             sqlCmd.Parameters.AddWithValue("@account_no", AccountNo);
             sqlCmd.Parameters.AddWithValue("@amount", Amount);
             sqlCmd.Parameters.AddWithValue("@duration", duration);
+            sqlCmd.Parameters.AddWithValue("@Rate_of_interest", rof);
+            
+            sqlCmd.Parameters.AddWithValue("@maturity_amount", ma);
             sqlCmd.Parameters.AddWithValue("@nominee", Nominee);
+            sqlCmd.Parameters.AddWithValue("@relation", Relation);
 
             sqlCmd.ExecuteNonQuery();
             sqlCon.Close();

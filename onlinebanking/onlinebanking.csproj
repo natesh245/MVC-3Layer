@@ -153,13 +153,14 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Styles\AccountStyles.css" />
+    <Content Include="Scripts\Openfds.js" />
+    <Content Include="Styles\AccountStyle.css" />
     <Content Include="Styles\CustomerStyles.css" />
     <Content Include="Styles\HomeStyle.css" />
     <Content Include="Styles\images\money.jpg" />
     <Content Include="Styles\images\moneybank.jpg" />
     <Content Include="Styles\images\Locker.jpg" />
-    <Content Include="Styles\LoginStyles.css" />
+    <Content Include="Styles\LoginStyle.css" />
     <Content Include="Styles\StatementStyles.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

@@ -25,7 +25,7 @@ namespace BussinessLayer
             SqlDataReader sdr= loginDl.Login(Emailid, Password);
             if (sdr.Read())
             {
-                 this.CustomerId = Convert.ToInt32(sdr["id"]);
+                this.CustomerId = Convert.ToInt32(sdr["id"]);
                 this.EmailId =sdr["email_id"].ToString();
                 this.FirstName = sdr["customer_first_name"].ToString();
                 this.LastName = sdr["customer_last_name"].ToString();

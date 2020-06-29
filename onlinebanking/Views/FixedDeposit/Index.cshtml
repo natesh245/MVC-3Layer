@@ -6,61 +6,125 @@
 
 
 
-    <div class="layout-container">
-        <div>
-            @{
-                Html.RenderPartial("_SideNavBar");
-            }
-        </div>
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
 
 
-
-            <div class="form-container">
-                <h2>Open Fixed Deposit</h2>
-                
-                @Html.ValidationSummary(true, "", new { @class = "error-text" })
-                <div>
-                    @Html.LabelFor(model => model.fdAmount, htmlAttributes: new { @class = "text-label" })
-
-                    @Html.EditorFor(model => model.fdAmount, new { htmlAttributes = new { @class = "text-box-login" } })
-                    @Html.ValidationMessageFor(model => model.fdAmount, "", new { @class = "error-text" })
-                </div>
+<div class="layout-container">
+    <div>
+        @{
+            Html.RenderPartial("_SideNavBar");
+        }
+    </div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
 
 
-                <div>
-                    @Html.LabelFor(model => model.Duration, htmlAttributes: new { @class = "text-label" })
-
-                    @Html.EditorFor(model => model.Duration, new { htmlAttributes = new { @class = "text-box-login" } })
-                    @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "error-text" })
-
-                </div>
-
-                <div>
-                    @Html.LabelFor(model => model.Nominee, htmlAttributes: new { @class = "text-label" })
-
-                    @Html.EditorFor(model => model.Nominee, new { htmlAttributes = new { @class = "text-box-login" } })
-                    @Html.ValidationMessageFor(model => model.Nominee, "", new { @class = "error-text" })
-
-                </div>
+        <h2>Open Fixed Deposit</h2>
+        <div class="form-container form-grid">
 
 
-                <div>
-                    <input type="submit" value="Create" class="btn btn-default" />
-                    <h4 class="error-text">@ViewData["Message"]</h4>
-                </div>
+            @Html.ValidationSummary(true, "", new { @class = "error-text" })
+            <div>
+                @Html.LabelFor(model => model.fdAmount, htmlAttributes: new { @class = "text-label" })
+
+                @Html.EditorFor(model => model.fdAmount, new { htmlAttributes = new { @class = "text-box-login", @id = "fdamount" } })
+                @Html.ValidationMessageFor(model => model.fdAmount, "", new { @class = "error-text" })
+            </div>
+
+
+            <div>
+                @Html.LabelFor(model => model.Duration, htmlAttributes: new { @class = "text-label" })
+
+                @Html.DropDownListFor(model => model.Duration, new List<SelectListItem>
+{
+      new SelectListItem { Text = "6 months", Value = "6", Selected=true},
+      new SelectListItem { Text = "7 months", Value = "7"},
+      new SelectListItem { Text = "8months", Value = "8"},
+        new SelectListItem { Text = "12 months", Value = "12"},
+          new SelectListItem { Text = "18 months", Value = "18"},
+          new SelectListItem { Text = "24 months", Value = "24"}
+}, new { htmlAttributes = new { @id = "duration" } })
+                @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "error-text", @id = "duration" })
 
             </div>
-        }
 
-        <div>
-            @Html.ActionLink("Back to Account ", "Details", "Account", new { id = @Session["customerid"] }, new { @class = "btn btn-primary", @style = "margin-left:4rem;" })
-            @Html.ActionLink("Details ", "FdDetail", "FixedDeposit", null, new { @class = "btn btn-primary", @style = "margin-left:4rem;" })
+            <div>
+                @Html.LabelFor(model => model.RateOfInterest, htmlAttributes: new { @class = "text-label" })
+
+                @Html.TextBoxFor(model => model.RateOfInterest, new { @class = "text-box-login", @id = "roi", @readonly = true })
+               
+                @Html.ValidationMessageFor(model => model.RateOfInterest, "", new { @class = "error-text" })
+
+            </div>
+
+           
+
+            <div>
+                @Html.LabelFor(model => model.MaturityAmount, htmlAttributes: new { @class = "text-label" })
+
+                @Html.TextBoxFor(model => model.MaturityAmount, new { @class = "text-box-login", @id = "ma", @readonly = true })
+              
+                @Html.ValidationMessageFor(model => model.MaturityAmount, "", new { @class = "error-text" })
+
+            </div>
+
+            <div>
+                @Html.LabelFor(model => model.MaturityDate, htmlAttributes: new { @class = "text-label" })
+
+                @Html.TextBoxFor(model => model.MaturityDate, new { @class = "text-box-login", @id = "md", @readonly = true })
+                
+                @Html.ValidationMessageFor(model => model.MaturityDate, "", new { @class = "error-text" })
+
+            </div>
+
+
+            <div>
+                @Html.LabelFor(model => model.Nominee, htmlAttributes: new { @class = "text-label" })
+
+                @Html.EditorFor(model => model.Nominee, new { htmlAttributes = new { @class = "text-box-login" } })
+                @Html.ValidationMessageFor(model => model.Nominee, "", new { @class = "error-text" })
+
+            </div>
+         
+
+            <div>
+                @Html.LabelFor(model => model.NomineeRelation, htmlAttributes: new { @class = "text-label" })
+
+                @Html.DropDownListFor(model => model.NomineeRelation, new List<SelectListItem>
+{
+      new SelectListItem { Text = "Father", Value = "Father", Selected=true},
+      new SelectListItem { Text = "Mother", Value = "Mother"},
+      new SelectListItem { Text = "Son", Value = "Son"},
+        new SelectListItem { Text = "Daughter", Value = "Daughter"},
+          new SelectListItem { Text = "Wife", Value = "Wife"},
+          new SelectListItem { Text = "Husband", Value = "Husband"}
+ })
+                @Html.ValidationMessageFor(model => model.NomineeRelation, "", new { @class = "error-text" })
+
+            </div>
+
+            <div>
+                <input type="submit" value="Create" class="btn btn-default" />
+                <h4 class="error-text">@ViewData["Message"]</h4>
+            </div>
+
         </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to Account ", "Details", "Account", new { id = @Session["customerid"] }, new { @class = "btn btn-primary", @style = "margin-left:4rem;" })
+        @Html.ActionLink("Details ", "FdDetail", "FixedDeposit", null, new { @class = "btn btn-primary", @style = "margin-left:4rem;" })
     </div>
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+
+}
+
+@section Scripts2 {
+    <script src="@Url.Content("~/Scripts/Openfds.js")" type="text/javascript"></script>
+
+
 }
