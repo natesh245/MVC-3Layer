@@ -16,6 +16,7 @@ namespace BussinessLayer
         public string EmailId;
         public string FirstName;
         public string LastName;
+        public long CustomerPhone;
 
         public void LoginUser(string Emailid,string Password)
         {
@@ -29,6 +30,7 @@ namespace BussinessLayer
                 this.EmailId =sdr["email_id"].ToString();
                 this.FirstName = sdr["customer_first_name"].ToString();
                 this.LastName = sdr["customer_last_name"].ToString();
+                this.CustomerPhone = Convert.ToInt64(sdr["phone"]);
                 LoginDataAccess.sqlCon.Close();
 
             }

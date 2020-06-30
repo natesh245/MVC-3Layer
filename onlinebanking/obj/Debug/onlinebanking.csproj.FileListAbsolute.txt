@@ -240,3 +240,12 @@ C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\obj\De
 C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\obj\Debug\onlinebanking.csproj.CopyComplete
 C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\obj\Debug\onlinebanking.dll
 C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\obj\Debug\onlinebanking.pdb
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Twilio.AspNet.Common.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Twilio.AspNet.Mvc.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Twilio.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Twilio.xml

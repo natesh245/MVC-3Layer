@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using BussinessLayer;
 using BussinessLayer.Models;
 using DataAccess;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 
 namespace onlinebanking.Controllers
 {
@@ -27,13 +29,28 @@ namespace onlinebanking.Controllers
         {
             try
             {
+                //Twilio
+                const string accountSid = "AC79aa0af132e16dd3e10edcdd31f63079";
+                const string authToken = "1eabd43fcefa44c134ef8f71b7d0b1d2";
+
+                TwilioClient.Init(accountSid, authToken);
+
+                
+
                 ViewData["Message"] = " ";
                 TransactionBusinessLayer tranBL = new TransactionBusinessLayer();
                 TransactionModel tranModel = new TransactionModel();
                 UpdateModel(tranModel);
                 tranBL.SendMoney(Convert.ToInt64(Session["Accountno"]), tranModel.AccountNo, tranModel.Amount);
                 ViewData["Message"] = " Transaction Successfull";
-               
+
+                var message = MessageResource.Create(
+                    body: "Transaction of Rs" +tranModel.Amount.ToString() + " To Account No: "+tranModel.AccountNo.ToString()+" is Successfull",
+                    from: new Twilio.Types.PhoneNumber("+12058518453"),
+                    to: new Twilio.Types.PhoneNumber("+91" + Session["PhoneNo"].ToString())
+                );
+
+
                 return View();
 
 

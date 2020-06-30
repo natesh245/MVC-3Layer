@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using BussinessLayer;
 using BussinessLayer.Models;
+using DataAccess;
 
 namespace onlinebanking.Controllers
 {
@@ -30,6 +31,7 @@ namespace onlinebanking.Controllers
                 FdBusinessLayer fdBl = new FdBusinessLayer();
                 fdBl.OpenFd(Convert.ToInt64(Session["Accountno"]),oFdModel.fdAmount,oFdModel.Duration,oFdModel.RateOfInterest,oFdModel.MaturityAmount,oFdModel.MaturityDate,oFdModel.Nominee,oFdModel.NomineeRelation);
                 ViewData["Message"] = "Fixed deposit created Successfully";
+                FdDataAccess.sqlCon.Close();
                 return View();
 
             }
@@ -48,6 +50,7 @@ namespace onlinebanking.Controllers
             FdDetailsModel fdModel = new FdDetailsModel();
             List<FdDetailsModel> fdModelList=fdBL.GetFdDetails(Convert.ToInt64(Session["Accountno"]));
             fdModel.FdDetailList = fdModelList;
+            FdDataAccess.sqlCon.Close();
             return View(fdModel);
 
         }

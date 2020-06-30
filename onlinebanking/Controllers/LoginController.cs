@@ -50,6 +50,7 @@ namespace onlinebanking.Controllers
                 Session["FirstName"] = lbObj.FirstName;
                 Session["LastName"] = lbObj.LastName;
                 Session["EmailId"] = lbObj.EmailId;
+                Session["PhoneNo"] = lbObj.CustomerPhone;
                 return RedirectToRoute(new
                 {
                     controller = "Account",

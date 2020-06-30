@@ -17,7 +17,7 @@ namespace DataAccess
         public SqlDataReader Login(string emailId, string Password)
         {
 
-            string sqlQuery = "select id,customer_first_name,customer_last_name, email_id,customer_password from CUSTOMER where email_id=@EmailId and customer_password=@UserPasssword";
+            string sqlQuery = "select id,customer_first_name,customer_last_name, email_id,customer_password,phone from CUSTOMER where email_id=@EmailId and customer_password=@UserPasssword";
             sqlCon.Open();
             SqlCommand sqlCmd = new SqlCommand(sqlQuery, sqlCon);
             sqlCmd.Parameters.AddWithValue("@EmailId",emailId);
