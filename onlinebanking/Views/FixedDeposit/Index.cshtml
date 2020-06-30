@@ -73,6 +73,7 @@
 
                 @Html.TextBoxFor(model => model.MaturityDate, new { @class = "text-box-login", @id = "md", @readonly = true })
                 
+
                 @Html.ValidationMessageFor(model => model.MaturityDate, "", new { @class = "error-text" })
 
             </div>
@@ -124,7 +125,7 @@
 }
 
 @section Scripts2 {
-    <script src="@Url.Content("~/Scripts/Openfds.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Openfd.js")" type="text/javascript"></script>
 
 
 }

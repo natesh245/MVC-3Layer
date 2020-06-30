@@ -22,16 +22,13 @@ namespace onlinebanking.Controllers
 
         [HttpPost]
         [ActionName("Index")]
-        public ActionResult Index_Post()
+        public ActionResult Index_Post(OpenFdModel oFdModel)
         {
             try
             {
                 ViewData["Message"] = " ";
-                OpenFdModel oFdModel = new OpenFdModel ();
-                
-                UpdateModel(oFdModel);
                 FdBusinessLayer fdBl = new FdBusinessLayer();
-                fdBl.OpenFd(Convert.ToInt64(Session["Accountno"]),oFdModel.fdAmount,oFdModel.Duration,oFdModel.Nominee,oFdModel.NomineeRelation);
+                fdBl.OpenFd(Convert.ToInt64(Session["Accountno"]),oFdModel.fdAmount,oFdModel.Duration,oFdModel.RateOfInterest,oFdModel.MaturityAmount,oFdModel.MaturityDate,oFdModel.Nominee,oFdModel.NomineeRelation);
                 ViewData["Message"] = "Fixed deposit created Successfully";
                 return View();
 

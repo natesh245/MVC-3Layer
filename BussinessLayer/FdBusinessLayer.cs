@@ -11,13 +11,13 @@ namespace BussinessLayer
 {
     public class FdBusinessLayer
     {
-        public void OpenFd(long accountno,int amount,int duration , string nominee, string rel)
+        public void OpenFd(long accountno,int amount,int duration ,decimal roi,int ma,string md, string nominee, string rel)
         {
-             double roi;
-             int maturityAmount;
+             
            
 
             FdDataAccess fdDac = new FdDataAccess();
+            /*
             if (duration >= 6 && duration <= 7)
             {
                 roi = 4;
@@ -40,10 +40,10 @@ namespace BussinessLayer
 
             DateTime today = DateTime.Today;
             DateTime dt = new DateTime(today.Year, today.Month, today.Day, 16, 0, 0);
-
+            */
         
             
-            fdDac.Create(accountno, amount, duration,roi, maturityAmount, nominee, rel);
+            fdDac.Create(accountno, amount, duration,roi, ma,md, nominee, rel);
 
         }
 
@@ -66,13 +66,15 @@ namespace BussinessLayer
 
                 fObj.Duration = Convert.ToInt32(ds.Tables[0].Rows[i]["Duration"].ToString());
 
-                fObj.RateOfInterest = Convert.ToInt64(ds.Tables[0].Rows[i]["rate_of_interest"].ToString());
+                fObj.RateOfInterest = Convert.ToDecimal(ds.Tables[0].Rows[i]["rate_of_interest"].ToString());
 
                 fObj.MaturityDate = Convert.ToDateTime(ds.Tables[0].Rows[i]["maturity_date"].ToString());
 
                 fObj.MaturityAmount = Convert.ToInt32(ds.Tables[0].Rows[i]["maturity_amount"].ToString());
 
                 fObj.Nominee = ds.Tables[0].Rows[i]["nominee"].ToString();
+
+                fObj.NomineeRelation = ds.Tables[0].Rows[i]["nominee_relation"].ToString();
 
                 FdDetailList.Add(fObj);
             }

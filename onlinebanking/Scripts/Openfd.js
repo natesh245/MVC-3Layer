@@ -9,9 +9,20 @@ function Calculate() {
     const duration = document.getElementById('Duration');
  
     var today = new Date();
-    var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear()
-   
+    //var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear()
+    
     selectedDuration = duration[duration.selectedIndex].value;
+    function addMonths(date, months) {
+        var d = date.getDate();
+        date.setMonth(date.getMonth() + +months);
+        if (date.getDate() != d) {
+            date.setDate(0);
+        }
+        return date;
+    }
+
+   
+    
     if (selectedDuration >= 6 && selectedDuration <= 7) {
         let roi = 4;
         rateOfInterest.value =4;
@@ -28,6 +39,7 @@ function Calculate() {
         rateOfInterest.value = 5;
         maturityAmount.value = parseInt(fdAmount) + ((parseInt(fdAmount) * parseInt(rateOfInterest.value) * parseInt(selectedDuration)) / 100);
     }
+    /*
 
     let month = parseInt(today.getMonth()) + 1 + parseInt(selectedDuration);
     let year = 0;
@@ -55,11 +67,9 @@ function Calculate() {
         month = month - 24;
         year = today.getFullYear() + 2;
     }
+    */
 
-
-    
-    
-    maturityDate.value = today.getDate() + '-' + month + '-' + year;
+    maturityDate.value = addMonths(new Date(today.getFullYear(), today.getMonth(), today.getDate()), selectedDuration).toString();
    
 }
 

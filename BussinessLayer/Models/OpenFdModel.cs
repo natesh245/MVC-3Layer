@@ -27,7 +27,7 @@ namespace BussinessLayer.Models
        
         [Display(Name = "Rate of Interest")]
        
-        public int RateOfInterest { get; set; }
+        public Decimal RateOfInterest { get; set; }
 
      
         [Display(Name = "Maturity Amount")]
