@@ -249,3 +249,4 @@ C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Tw
 C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Microsoft.IdentityModel.Tokens.xml
 C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Twilio.xml
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Rotativa.dll

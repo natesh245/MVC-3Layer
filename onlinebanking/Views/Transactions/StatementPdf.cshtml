@@ -1,0 +1,69 @@
+﻿@model BussinessLayer.Models.StatementModel
+
+@{
+    ViewBag.Title = "StatementPdf";
+}
+
+<h2>Account Statement</h2>
+
+<div >
+    
+    
+    @foreach (var statementItem in Model.statementList)
+    {
+    <table>
+        <tr style="font-size:1.5rem;font-weight:100;">
+            <th >
+                @Html.DisplayNameFor(item => statementItem.TransactionId)
+            </th>
+            <th >
+                @Html.DisplayNameFor(item => statementItem.DebitAccount)
+            </th>
+            <th >
+                @Html.DisplayNameFor(item => statementItem.CreditAccount)
+            </th>
+          
+
+            <th>
+                @Html.DisplayNameFor(item => statementItem.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(item => statementItem.TransactionDate)
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(item => statementItem.TransactionId)
+            </td>
+
+
+
+            <td>
+                @Html.DisplayFor(item => statementItem.DebitAccount)
+            </td>
+
+
+
+            <td>
+                @Html.DisplayFor(item => statementItem.CreditAccount)
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(item => statementItem.Amount)
+            </td>
+
+
+
+            <td>
+                @Html.DisplayFor(item => statementItem.TransactionDate)
+            </td>
+
+        </tr>
+
+    </table>
+ 
+    }
+
+</div>
+

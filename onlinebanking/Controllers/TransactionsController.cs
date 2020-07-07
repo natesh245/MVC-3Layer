@@ -11,11 +11,13 @@ using BussinessLayer.Models;
 using DataAccess;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
+using Rotativa;
 
 namespace onlinebanking.Controllers
 {
     public class TransactionsController : Controller
     {
+        public static long CurrentAccount;
         // GET: Transactions
         [HttpGet]
         public ActionResult Index()
@@ -44,11 +46,20 @@ namespace onlinebanking.Controllers
                 tranBL.SendMoney(Convert.ToInt64(Session["Accountno"]), tranModel.AccountNo, tranModel.Amount);
                 ViewData["Message"] = " Transaction Successfull";
 
-                var message = MessageResource.Create(
-                    body: "Transaction of Rs" +tranModel.Amount.ToString() + " To Account No: "+tranModel.AccountNo.ToString()+" is Successfull",
-                    from: new Twilio.Types.PhoneNumber("+12058518453"),
-                    to: new Twilio.Types.PhoneNumber("+91" + Session["PhoneNo"].ToString())
-                );
+                try
+                {
+                    var message = MessageResource.Create(
+                 body: "Transaction of Rs" + tranModel.Amount.ToString() + " To Account No: " + tranModel.AccountNo.ToString() + " is Successfull",
+                 from: new Twilio.Types.PhoneNumber("+12058518453"),
+                 to: new Twilio.Types.PhoneNumber("+918660069868")   
+             );
+
+                }
+                catch
+                {
+                    ViewData["Message"] = "Transaction Successful, Message not sent";
+                }
+             
 
 
                 return View();
@@ -68,6 +79,7 @@ namespace onlinebanking.Controllers
 
         public ActionResult Statement()
         {
+            TransactionsController.CurrentAccount = Convert.ToInt64(Session["Accountno"]);
             TransactionBusinessLayer sObj = new TransactionBusinessLayer();
             StatementModel sModel = new StatementModel();
            List<StatementModel> tranList= sObj.GetStatement(Convert.ToInt64(Session["Accountno"]));
@@ -75,7 +87,26 @@ namespace onlinebanking.Controllers
            
             return View(sModel);
         }
-       
+
+        public ActionResult StatementPdf()
+        {
+            TransactionBusinessLayer stObj = new TransactionBusinessLayer();
+            StatementModel stModel = new StatementModel();
+            //  List<StatementModel> tranList = stObj.GetStatement(Convert.ToInt64(Session["Accountno"]));
+            //List<StatementModel> tranList = stObj.GetStatement(110010001114 );
+            List<StatementModel> tranList = stObj.GetStatement(TransactionsController.CurrentAccount);
+            stModel.statementList = tranList;
+
+            return View(stModel);
+        }
+
+
+
+        public ActionResult PrintStatementToPdf()
+        {
+            var statementPdf = new ActionAsPdf("StatementPdf");
+            return statementPdf;
+        }
 
     } 
 }
