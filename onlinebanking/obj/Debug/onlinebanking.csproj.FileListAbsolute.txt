@@ -250,3 +250,5 @@ C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Mi
 C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Twilio.xml
 C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\Rotativa.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\mailinblue.dll
+C:\Users\HP\Desktop\online banking\OnlineBanking\MVC-3Layer\onlinebanking\bin\mailinblue.pdb

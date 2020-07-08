@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 using BussinessLayer;
 using BussinessLayer.Models;
@@ -12,6 +13,9 @@ using DataAccess;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Rotativa;
+
+using System.Net.Mail;
+
 
 namespace onlinebanking.Controllers
 {
@@ -31,14 +35,7 @@ namespace onlinebanking.Controllers
         {
             try
             {
-                //Twilio
-                const string accountSid = "AC79aa0af132e16dd3e10edcdd31f63079";
-                const string authToken = "1eabd43fcefa44c134ef8f71b7d0b1d2";
-
-                TwilioClient.Init(accountSid, authToken);
-
                 
-
                 ViewData["Message"] = " ";
                 TransactionBusinessLayer tranBL = new TransactionBusinessLayer();
                 TransactionModel tranModel = new TransactionModel();
@@ -46,12 +43,18 @@ namespace onlinebanking.Controllers
                 tranBL.SendMoney(Convert.ToInt64(Session["Accountno"]), tranModel.AccountNo, tranModel.Amount);
                 ViewData["Message"] = " Transaction Successfull";
 
+                /*
                 try
                 {
+                    //Twilio
+                    const string accountSid = "your account sid";
+                    const string authToken = "your auth token";
+
+                    TwilioClient.Init(accountSid, authToken);
                     var message = MessageResource.Create(
                  body: "Transaction of Rs" + tranModel.Amount.ToString() + " To Account No: " + tranModel.AccountNo.ToString() + " is Successfull",
-                 from: new Twilio.Types.PhoneNumber("+12058518453"),
-                 to: new Twilio.Types.PhoneNumber("+918660069868")   
+                 from: new Twilio.Types.PhoneNumber("your twilio phone no"),
+                  to: new Twilio.Types.PhoneNumber("+91yourno")
              );
 
                 }
@@ -59,9 +62,35 @@ namespace onlinebanking.Controllers
                 {
                     ViewData["Message"] = "Transaction Successful, Message not sent";
                 }
-             
+                */
 
-
+                /*
+                try
+                {
+                    //Transactional Email
+                    string userName= WebConfigurationManager.AppSettings["GmailUserName"];
+                    string password = WebConfigurationManager.AppSettings["GmailPassword"];
+                    MailMessage mail = new MailMessage();
+                    mail.To.Add("natesh246@gmail.com");
+                    mail.From = new MailAddress("natesh246@gmail.com");
+                    mail.Subject = "Transaction Successfull";
+                    string Body = "Transaction Successful, Amount of Rs "+tranModel.Amount.ToString()+" is paid to account "+tranModel.AccountNo.ToString() ;
+                    mail.Body = Body;
+                    mail.IsBodyHtml = true;
+                    SmtpClient smtp = new SmtpClient();
+                    smtp.Host = "smtp.gmail.com";
+                    smtp.Port = 587;
+                    smtp.UseDefaultCredentials = false;
+                    smtp.Credentials = new System.Net.NetworkCredential(userName, password); // Enter seders User name and password  
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                    ViewData["Message"] = "Transaction Successful";
+                }
+                catch
+                {
+                    ViewData["Message"] = "Transaction Successful, Mail not sent";
+                }
+                */
                 return View();
 
 

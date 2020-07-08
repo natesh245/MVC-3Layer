@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using DataAccess;
 using BussinessLayer.Models;
 using System.Data;
+using System.Net.Mail;
+
 
 namespace BussinessLayer
 {
@@ -41,6 +43,28 @@ namespace BussinessLayer
             
             TransactionDataAccess.sqlCon.Close();
             return Transactionlist;
+        }
+
+        public void SendTransactionEmail()
+        {
+            /*
+            string userName = WebConfigurationManager.AppSettings["GmailUserName"];
+            string password = WebConfigurationManager.AppSettings["GmailPassword"];
+            MailMessage mail = new MailMessage();
+            mail.To.Add("natesh246@gmail.com");
+            mail.From = new MailAddress("natesh246@gmail.com");
+            mail.Subject = "Transaction Successfull";
+            string Body = "Transaction Successful, Amount of Rs " + tranModel.Amount.ToString() + " iss paid to account " + tranModel.AccountNo.ToString();
+            mail.Body = Body;
+            mail.IsBodyHtml = true;
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = "smtp.gmail.com";
+            smtp.Port = 587;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new System.Net.NetworkCredential(userName, password); // Enter seders User name and password  
+            smtp.EnableSsl = true;
+            smtp.Send(mail);
+            */
         }
         
     }
